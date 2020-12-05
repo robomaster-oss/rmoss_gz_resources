@@ -1,6 +1,6 @@
-# rmoss_ign_common_resources
+# rmoss_ign_resources
 
-rmoss_ign_common_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)项目中的RoboMaster Ignition Simulator提供公共模型资源。目前包括三种类型：
+rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)项目中的RoboMaster Ignition Simulator提供公共模型资源。目前包括三种类型：
 
 * 通用机器人组件模型
   * 通用机器人传感器：激光雷达，相机等
