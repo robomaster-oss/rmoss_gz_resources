@@ -5,14 +5,40 @@
 <!-- =================================================================================== -->
 <sdf version="1.7">
 	<!--xacro_define_macro: rplidar_a2-->
-	<!--xacro_define_macro: rplidar_a2_model-->
 	<!--rplidar a2-->
 	<model name="simple_rplidar_a2">
+		<pose>0 0 0.2 0 0 0</pose>
+		<link name="base_link">
+			<inertial>
+				<mass>0.4</mass>
+				<inertia>
+					<ixx>0.01066666666666667</ixx>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyy>0.01066666666666667</iyy>
+					<iyz>0</iyz>
+					<izz>0.01066666666666667</izz>
+				</inertia>
+			</inertial>
+			<visual name="visual">
+				<geometry>
+					<box>
+						<size>0.4 0.4 0.4</size>
+					</box>
+				</geometry>
+			</visual>
+			<collision name="collision">
+				<geometry>
+					<box>
+						<size>0.4 0.4 0.4</size>
+					</box>
+				</geometry>
+			</collision>
+		</link>
 		<!--update_rate(10-15),samples(400)-->
-		<pose>0 0 0.1 0 0 0</pose>
 		<joint name="simple_rplidar_a2_joint" type="fixed">
-			<pose relative_to=""/>
-			<parent/>
+			<pose relative_to="base_link">0 0 0.2 0 0 0</pose>
+			<parent>base_link</parent>
 			<child>simple_rplidar_a2</child>
 		</joint>
 		<link name="simple_rplidar_a2">
