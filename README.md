@@ -5,7 +5,8 @@ rmoss_ign_common_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss
 * 通用机器人组件模型
   * 通用机器人传感器：激光雷达，相机等
   * 通用机器人零件：麦克拉姆轮等
-  * 机器人裁判系统相关组件
+* 裁判系统相关组件
+  * 机器人裁判系统：装甲板模块，枪口测速模块，指示灯模块等
 * RoboMaster官方机器人模型
   * RoboMaster University AI Challenge标准步兵机器人模型
 * 通用场地道具模型
@@ -13,16 +14,20 @@ rmoss_ign_common_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss
 
 ## 1. 模型列表
 
-#### 1.1 机器人组件模型
+机器人组件模型
 
 * industrial_camera：工业相机
 * rplidar_a2：激光雷达([www.slamtec.com/cn/Lidar/A2](http://www.slamtec.com/cn/Lidar/A2))
 
-#### 1.2 官方机器人模型
+裁判系统相关组件
+
+* 暂无
+
+官方机器人模型
 
 * rmua19_standard_robot：RoboMaster University AI Challenge 2019 标准步兵机器人
 
-#### 1.3 场地道具模型
+场地道具模型
 
 * rm_projectile_17mm：比赛用17mm弹丸
 
