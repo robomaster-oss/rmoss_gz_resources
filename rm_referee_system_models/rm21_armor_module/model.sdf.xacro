@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
+    <!--property defination-->
+    <xacro_define_property name="global_armor_sticker_map_uri" value="model://rm21_armor_module/materials/textures/armor_sticker_num1.png" />
     <!--macro defination: small armor module-->
     <xacro_define_macro name="small_armor" params="suffix parent rgb pose">
         <joint name="small_armor${suffix}_joint" type="fixed">
@@ -26,6 +28,25 @@
                     <diffuse>${rgb} 1</diffuse>
                     <specular>1 1 1 1</specular>
                     <emissive>${rgb} 1</emissive>
+                </material>
+            </visual>
+            <visual name="sticker_visual">
+                <pose>0.014 0 0.065 1.5708 0 1.5708</pose>
+                <geometry>
+                    <plane>
+                        <normal>0 0 1</normal>
+                        <size>0.1 0.1</size>
+                    </plane>
+                </geometry>
+                <material>
+                    <diffuse>1.0 1.0 1.0</diffuse>
+                    <specular>1.0 1.0 1.0</specular>
+                    <ambient>1.0 1.0 1.0</ambient>
+                    <pbr>
+                        <metal>
+                            <albedo_map>${global_armor_sticker_map_uri}</albedo_map>
+                        </metal>
+                    </pbr>
                 </material>
             </visual>
             <collision name="collision">
@@ -62,6 +83,25 @@
                     <diffuse>${rgb} 1</diffuse>
                     <specular>1 1 1 1</specular>
                     <emissive>${rgb} 1</emissive>
+                </material>
+            </visual>
+            <visual name="sticker_visual">
+                <pose>0.014 0 0.065 1.5708 0 1.5708</pose>
+                <geometry>
+                    <plane>
+                        <normal>0 0 1</normal>
+                        <size>0.1 0.1</size>
+                    </plane>
+                </geometry>
+                <material>
+                    <diffuse>1.0 1.0 1.0</diffuse>
+                    <specular>1.0 1.0 1.0</specular>
+                    <ambient>1.0 1.0 1.0</ambient>
+                    <pbr>
+                        <metal>
+                            <albedo_map>${global_armor_sticker_map_uri}</albedo_map>
+                        </metal>
+                    </pbr>
                 </material>
             </visual>
             <collision name="collision">
@@ -119,7 +159,7 @@
         </link>
         <xacro_macro name="small_armor" suffix="_1" parent="base_link" rgb="1 0 0" pose="0 -0.15 0.2 0 0 0"/>
         <xacro_macro name="large_armor" suffix="_2" parent="base_link" rgb="1 0 0" pose="0 0.15 0.2 0 0 0"/>
-        <xacro_macro name="small_armor_with_support" suffix="_3" parent="base_link" rgb="1 0 0" pose="0.2 0 0 0 0 0"/> 
-        <xacro_macro name="large_armor_with_support" suffix="_4" parent="base_link" rgb="1 0 0" pose="0 0.2 0 0 0 1.57"/>   
+        <xacro_macro name="small_armor_with_support" suffix="_3" parent="base_link" rgb="1 0 0" pose="0.2 0 0 0 0 0"/>
+        <xacro_macro name="large_armor_with_support" suffix="_4" parent="base_link" rgb="1 0 0" pose="0 0.2 0 0 0 1.57"/>
     </model>
 </sdf>
