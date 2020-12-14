@@ -6,7 +6,7 @@
 <sdf version="1.7">
 	<!--include defination-->
 	<!--property defination-->
-	<!--macro defination: rmua19_standard_robot_base-->
+	<!--macro defination: rmua19_standard_robot-->
 	<!--rmua19_standard_robot model-->
 	<model name="rmua19_standard_robot">
 		<pose>0 0 0.15 0 0 0</pose>
@@ -436,10 +436,10 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 1 1 1</ambient>
-					<diffuse>1 1 1 1</diffuse>
+					<ambient>1 0 0 1</ambient>
+					<diffuse>1 0 0 1</diffuse>
 					<specular>1 1 1 1</specular>
-					<emissive>1 1 1 1</emissive>
+					<emissive>1 0 0 1</emissive>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
@@ -551,10 +551,10 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 1 1 1</ambient>
-					<diffuse>1 1 1 1</diffuse>
+					<ambient>1 0 0 1</ambient>
+					<diffuse>1 0 0 1</diffuse>
 					<specular>1 1 1 1</specular>
-					<emissive>1 1 1 1</emissive>
+					<emissive>1 0 0 1</emissive>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
@@ -666,10 +666,10 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 1 1 1</ambient>
-					<diffuse>1 1 1 1</diffuse>
+					<ambient>1 0 0 1</ambient>
+					<diffuse>1 0 0 1</diffuse>
 					<specular>1 1 1 1</specular>
-					<emissive>1 1 1 1</emissive>
+					<emissive>1 0 0 1</emissive>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
@@ -781,10 +781,10 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 1 1 1</ambient>
-					<diffuse>1 1 1 1</diffuse>
+					<ambient>1 0 0 1</ambient>
+					<diffuse>1 0 0 1</diffuse>
 					<specular>1 1 1 1</specular>
-					<emissive>1 1 1 1</emissive>
+					<emissive>1 0 0 1</emissive>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
@@ -855,10 +855,10 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 1 1 1</ambient>
-					<diffuse>1 1 1 1</diffuse>
+					<ambient>1 0 0 1</ambient>
+					<diffuse>1 0 0 1</diffuse>
 					<specular>1 1 1 1</specular>
-					<emissive>1 1 1 1</emissive>
+					<emissive>1 0 0 1</emissive>
 				</material>
 			</visual>
 			<collision name="light_indicator_bar_collision">
@@ -904,10 +904,10 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 1 1 1</ambient>
-					<diffuse>1 1 1 1</diffuse>
+					<ambient>1 0 0 1</ambient>
+					<diffuse>1 0 0 1</diffuse>
 					<specular>1 1 1 1</specular>
-					<emissive>1 1 1 1</emissive>
+					<emissive>1 0 0 1</emissive>
 				</material>
 			</visual>
 			<collision name="collision">

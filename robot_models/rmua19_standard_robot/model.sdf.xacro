@@ -11,9 +11,10 @@
     <xacro_define_property name="global_chassis_mass" value="15.0" />
     <xacro_define_property name="global_gimbal_yaw_mass" value="1.0" />
     <xacro_define_property name="global_gimbal_pitch_mass" value="0.5" />
-    <xacro_define_property name="global_light_bar_rgb" value="1 1 1" />
-    <!--macro defination: rmua19_standard_robot_base-->
-    <xacro_define_macro name="rmua19_standard_robot_base">
+    <xacro_define_property name="global_light_bar_rgb" value="1 0 0" />
+    <xacro_define_property name="global_armor_sticker_map_uri" value="model://rm21_armor_module/materials/textures/armor_sticker_num1.png" />
+    <!--macro defination: rmua19_standard_robot-->
+    <xacro_define_macro name="rmua19_standard_robot">
         <!--chassis-->
         <link name="chassis" >
             <inertial>
@@ -71,8 +72,7 @@
                 <pose>0 0 0.06 0 0 0</pose>
                 <xacro_macro name="inertia_cylinder"  m="${global_gimbal_yaw_mass}" r="0.05" l="0.17"/>
             </inertial>
-            <xacro_macro name="visual_collision_with_mesh" prefix="gimbal_yaw" 
-                    uri="model://rmua19_standard_robot/meshes/gimbal_yaw.dae"/>
+            <xacro_macro name="visual_collision_with_mesh" prefix="gimbal_yaw" uri="model://rmua19_standard_robot/meshes/gimbal_yaw.dae"/>
         </link>
         <!--gimbal pitch module-->
         <joint name="gimbal_pitch_joint" type="revolute">
@@ -93,22 +93,21 @@
                 <pose>0.02 0 0 0 0 0</pose>
                 <xacro_macro name="inertia_box"  m="${global_gimbal_pitch_mass}" x="0.25" y="0.09" z="0.10" />
             </inertial>
-            <xacro_macro name="visual_collision_with_mesh" prefix="gimbal_pitch" 
-                    uri="model://rmua19_standard_robot/meshes/gimbal_pitch.dae"/>
+            <xacro_macro name="visual_collision_with_mesh" prefix="gimbal_pitch" uri="model://rmua19_standard_robot/meshes/gimbal_pitch.dae"/>
         </link>
         <!--for referee system -->
         <!--front armors -->
-        <xacro_macro name="small_armor_with_support" suffix="_0" parent="chassis" 
-                rgb="${global_light_bar_rgb}" pose="0.197 0 0.061 0 0 0"/>
+        <xacro_macro name="small_armor_with_support" suffix="_0" parent="chassis" rgb="${global_light_bar_rgb}" 
+                sticker_uri="${global_armor_sticker_map_uri}" pose="0.197 0 0.061 0 0 0"/>
         <!--left armors -->
-        <xacro_macro name="small_armor_with_support" suffix="_1" parent="chassis" 
-                rgb="${global_light_bar_rgb}" pose="0 0.116 0.061 0 0 1.5708"/>
+        <xacro_macro name="small_armor_with_support" suffix="_1" parent="chassis" rgb="${global_light_bar_rgb}"
+                sticker_uri="${global_armor_sticker_map_uri}" pose="0 0.116 0.061 0 0 1.5708"/>
         <!--rear armors -->
-        <xacro_macro name="small_armor_with_support" suffix="_2" parent="chassis" 
-                rgb="${global_light_bar_rgb}" pose="-0.197 0 0.061 0 0 3.14"/>
+        <xacro_macro name="small_armor_with_support" suffix="_2" parent="chassis" rgb="${global_light_bar_rgb}"
+                sticker_uri="${global_armor_sticker_map_uri}" pose="-0.197 0 0.061 0 0 3.14"/>
         <!--right armors -->
-        <xacro_macro name="small_armor_with_support" suffix="_3" parent="chassis" 
-                rgb="${global_light_bar_rgb}" pose="0 -0.116 0.061 0 0 -1.5708"/>
+        <xacro_macro name="small_armor_with_support" suffix="_3" parent="chassis" rgb="${global_light_bar_rgb}" 
+                sticker_uri="${global_armor_sticker_map_uri}" pose="0 -0.116 0.061 0 0 -1.5708"/>
         <!--light_indicator-->
         <xacro_macro name="light_indicator" prefix="" parent="chassis" rgb="${global_light_bar_rgb}" pose="-0.207 0 0.1 0 0 0"/>
         <!--speed_monitor_17mm-->
@@ -117,7 +116,7 @@
     <!--rmua19_standard_robot model-->
     <model name="rmua19_standard_robot">
         <pose>0 0 0.15 0 0 0</pose>
-        <xacro_macro name="rmua19_standard_robot_base"/>
+        <xacro_macro name="rmua19_standard_robot"/>
         <!--plugins-->
         <!--plugin for joint state sensor-->
         <plugin filename="ignition-gazebo-joint-state-publisher-system" 
