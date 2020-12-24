@@ -6,7 +6,7 @@ find_package(ament_cmake REQUIRED)
 
 #install
 install( DIRECTORY
-    rm_referee_system_models robot_component_models robot_models world_models
+     models  modules
   DESTINATION share/${PROJECT_NAME}
 )
 

@@ -1,8 +1,4 @@
-prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/@PROJECT_NAME@/rm_referee_system_models
-prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/@PROJECT_NAME@/robot_component_models
-prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/@PROJECT_NAME@/robot_models
-prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/@PROJECT_NAME@/world_models
-prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/@PROJECT_NAME@/worlds
-prepend-non-duplicate;SDF_PATH;share/@PROJECT_NAME@/robot_component_models
-prepend-non-duplicate;SDF_PATH;share/@PROJECT_NAME@/robot_models
-prepend-non-duplicate;SDF_PATH;share/@PROJECT_NAME@/world_models
+prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/@PROJECT_NAME@/models
+prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/@PROJECT_NAME@/modules
+prepend-non-duplicate;SDF_PATH;share/@PROJECT_NAME@/models
+prepend-non-duplicate;SDF_PATH;share/@PROJECT_NAME@/modules
