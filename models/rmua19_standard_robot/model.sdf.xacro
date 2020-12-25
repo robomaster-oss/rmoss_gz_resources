@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
     <!--include defination-->
-    <xacro_include_definition uri="model://rplidar_a2/model.sdf.xacro" />
-    <xacro_include_definition uri="model://industrial_camera/model.sdf.xacro" />
     <xacro_include_definition uri="model://rm21_armor_module/model.sdf.xacro" />
     <xacro_include_definition uri="model://rm21_light_indicator_module/model.sdf.xacro" />
     <xacro_include_definition uri="model://rm21_speed_monitor_module/model.sdf.xacro" />

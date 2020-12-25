@@ -6,7 +6,7 @@ find_package(ament_cmake REQUIRED)
 
 #install
 install( DIRECTORY
-     models  modules
+     models 
   DESTINATION share/${PROJECT_NAME}
 )
 

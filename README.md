@@ -1,22 +1,17 @@
 # rmoss_ign_resources
 
-rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)项目中的RoboMaster Ignition Simulator提供公共模型资源。目前包括三种类型：
+rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)项目中的RoboMaster Ignition Simulator提供公共基本模型资源。目前包括2种类型：
 
-* 组件 (一般不单独使用)
-  * 通用机器人传感器：激光雷达，相机等
-  * 通用机器人零件：麦克拉姆轮等
-  * 机器人裁判系统：装甲板模块，枪口测速模块，指示灯模块等
+* 裁判系统模块组件：装甲板模块，枪口测速模块，指示灯模块等 (一般不单独使用)
 * 模型
   * RoboMaster官方机器人模型:RoboMaster University AI Challenge标准步兵机器人模型
-  * RoboMaster通用场地道具：弹丸，障碍块
+  * RoboMaster核心场地道具：弹丸
 
 
 ## 1. 模型列表
 
-**组件**
+**裁判系统组件**
 
-* industrial_camera：工业相机
-* rplidar_a2：激光雷达([www.slamtec.com/cn/Lidar/A2](http://www.slamtec.com/cn/Lidar/A2))
 * rm21_armor_module：装甲板模块，包含大小装甲板，以及是否带有装甲板支架的xacro定义。
 * rm21_light_indicator_module：指示灯模块。
 * rm21_speed_monitor_module：枪口测速模块，目前只有17mm的xacro定义。
