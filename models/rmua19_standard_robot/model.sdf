@@ -6,7 +6,6 @@
 <sdf version="1.7">
 	<!--include defination-->
 	<!--property defination-->
-	<!--macro defination: rmua19_standard_robot-->
 	<!--rmua19_standard_robot model-->
 	<model name="rmua19_standard_robot">
 		<pose>0 0 0.15 0 0 0</pose>

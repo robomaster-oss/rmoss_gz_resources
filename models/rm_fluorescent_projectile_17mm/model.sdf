@@ -5,7 +5,7 @@
 <!-- =================================================================================== -->
 <sdf version="1.7">
 	<model name="rm_projectile_17mm">
-		<link name="rm_projectile_17mm">
+		<link name="link">
 			<inertial>
 				<mass>0.0032</mass>
 				<inertia>

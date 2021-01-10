@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+    <!--include defination-->
+    <xacro_include_definition uri="model://rm21_armor_module/rm21_armor_module.def.xacro" />
+    <xacro_include_definition uri="model://rm21_light_indicator_module/rm21_light_indicator_module.def.xacro" />
+    <xacro_include_definition uri="model://rm21_speed_monitor_module/rm21_speed_monitor_module.def.xacro" />
+    <xacro_include_definition uri="model://rmua19_standard_robot/chassis_wheel.def.xacro" />
+    <!--property defination-->
+    <xacro_define_property name="global_chassis_mass" value="15.0" />
+    <xacro_define_property name="global_gimbal_yaw_mass" value="1.0" />
+    <xacro_define_property name="global_gimbal_pitch_mass" value="0.5" />
+    <!--macro defination: rmua19_standard_robot-->
+    <xacro_define_macro name="rmua19_standard_robot" params="light_bar_rgb armor_sticker_map_uri">
+        <!--chassis-->
+        <link name="chassis" >
+            <inertial>
+                <xacro_macro name="inertia_box"  m="${global_chassis_mass}" x="0.36" y="0.24" z="0.15"/>
+            </inertial>
+            <visual name="chassis_visual">
+                <xacro_macro name="geometry_mesh" uri="model://rmua19_standard_robot/meshes/chassis_base.dae"/>
+            </visual>
+            <collision name="chassis_base_collision">
+                <pose>0 0 0.055 0 0 0</pose>
+                <xacro_macro name="geometry_box" x="0.36" y="0.24" z="0.15"/>
+            </collision>
+            <collision name="chassis_projectile_container_collision">
+                <pose>-0.122 0 0.177 0 0 0</pose>
+                <xacro_macro name="geometry_box" x="0.1" y="0.18" z="0.146"/>
+            </collision>
+            <collision name="chassis_fornt_wheel_holder_collision">
+                <pose>0.208 0 0 0 0 0</pose>
+                <xacro_macro name="geometry_box" x="0.055" y="0.367" z="0.055"/>
+            </collision>
+            <collision name="chassis_rear_wheel_holder_collision">
+                <pose>-0.208 0 0 0 0 0</pose>
+                <xacro_macro name="geometry_box" x="0.055" y="0.367" z="0.055"/>
+            </collision>
+            <sensor name="chassis_imu" type="imu" >
+                <always_on>1</always_on>
+                <update_rate>30</update_rate>
+                <visualize>0</visualize>
+            </sensor>
+        </link>
+        <!--front_left wheel link and joint-->
+        <xacro_macro name="chassis_wheel_l"  prefix="front_left" parent="chassis" pose="0.207 0.194 0 0 0 0"/>
+        <!--front_right wheel link and joint-->
+        <xacro_macro name="chassis_wheel_r"  prefix="front_right" parent="chassis" pose="0.207 -0.194 0 0 0 0"/>
+        <!--rear_left wheel link and joint-->
+        <xacro_macro name="chassis_wheel_r"  prefix="rear_left" parent="chassis" pose="-0.207 0.194 0 0 0 0"/>
+        <!--rear_right wheel link and joint-->
+        <xacro_macro name="chassis_wheel_l"  prefix="rear_right" parent="chassis" pose="-0.207 -0.194 0 0 0 0"/>
+        <!--gimbal yaw module-->
+        <joint name="gimbal_yaw_joint" type="revolute">
+            <pose relative_to='chassis'>0 0 0.1376 0 0 0</pose>
+            <parent>chassis</parent>
+            <child>gimbal_yaw</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                    <lower>-1.57</lower>
+                    <upper>1.57</upper>
+                </limit>
+            </axis>
+        </joint>
+        <link name="gimbal_yaw" >
+            <pose relative_to="gimbal_yaw_joint">0 0 0 0 0 0</pose>
+            <inertial>
+                <pose>0 0 0.06 0 0 0</pose>
+                <xacro_macro name="inertia_cylinder"  m="${global_gimbal_yaw_mass}" r="0.05" l="0.17"/>
+            </inertial>
+            <xacro_macro name="visual_collision_with_mesh" prefix="gimbal_yaw" uri="model://rmua19_standard_robot/meshes/gimbal_yaw.dae"/>
+        </link>
+        <!--gimbal pitch module-->
+        <joint name="gimbal_pitch_joint" type="revolute">
+            <pose relative_to='gimbal_yaw'>0 0.004 0.16 0 0 0</pose>
+            <parent>gimbal_yaw</parent>
+            <child>gimbal_pitch</child>
+            <axis>
+                <xyz>0 1 0</xyz>
+                <limit>
+                    <lower>${-3.14*0.25}</lower>
+                    <upper>${3.14*0.18}</upper>
+                </limit>
+            </axis>
+        </joint>
+        <link name="gimbal_pitch" >
+            <pose relative_to="gimbal_pitch_joint">0 0 0 0 0 0</pose>
+            <inertial>
+                <pose>0.02 0 0 0 0 0</pose>
+                <xacro_macro name="inertia_box"  m="${global_gimbal_pitch_mass}" x="0.25" y="0.09" z="0.10" />
+            </inertial>
+            <xacro_macro name="visual_collision_with_mesh" prefix="gimbal_pitch" uri="model://rmua19_standard_robot/meshes/gimbal_pitch.dae"/>
+        </link>
+        <!--for referee system -->
+        <!--front armors -->
+        <xacro_macro name="small_armor_with_support" suffix="_0" parent="chassis" rgb="${light_bar_rgb}" 
+                sticker_uri="${armor_sticker_map_uri}" pose="0.197 0 0.061 0 0 0"/>
+        <!--left armors -->
+        <xacro_macro name="small_armor_with_support" suffix="_1" parent="chassis" rgb="${light_bar_rgb}"
+                sticker_uri="${armor_sticker_map_uri}" pose="0 0.116 0.061 0 0 1.5708"/>
+        <!--rear armors -->
+        <xacro_macro name="small_armor_with_support" suffix="_2" parent="chassis" rgb="${light_bar_rgb}"
+                sticker_uri="${armor_sticker_map_uri}" pose="-0.197 0 0.061 0 0 3.14"/>
+        <!--right armors -->
+        <xacro_macro name="small_armor_with_support" suffix="_3" parent="chassis" rgb="${light_bar_rgb}" 
+                sticker_uri="${armor_sticker_map_uri}" pose="0 -0.116 0.061 0 0 -1.5708"/>
+        <!--light_indicator-->
+        <xacro_macro name="light_indicator" suffix="" parent="chassis" rgb="${light_bar_rgb}" pose="-0.207 0 0.1 0 0 0"/>
+        <!--speed_monitor_17mm-->
+        <xacro_macro name="speed_monitor_17mm" suffix="" parent="gimbal_pitch" rgb="${light_bar_rgb}" pose="0.07 0 0 0 0 0"/>
+    </xacro_define_macro>
+</sdf>

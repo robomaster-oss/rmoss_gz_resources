@@ -4,12 +4,8 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <sdf version="1.7">
+	<!--include defination-->
 	<!--property defination-->
-	<!--macro defination: small armor module-->
-	<!--macro defination: large armor module-->
-	<!--macro defination: armor support frame-->
-	<!--macro defination: small armor module with support frame-->
-	<!--macro defination: large armor module with support frame-->
 	<!--rm21_armor_module example-->
 	<model name="rm21_armor_module">
 		<pose>0 0 0.2 0 0 0</pose>

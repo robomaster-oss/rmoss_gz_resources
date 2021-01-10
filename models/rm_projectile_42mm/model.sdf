@@ -5,7 +5,7 @@
 <!-- =================================================================================== -->
 <sdf version="1.7">
 	<model name="rm_projectile_42mm">
-		<link name="rm_projectile_42mm">
+		<link name="link">
 			<inertial>
 				<mass>0.041</mass>
 				<inertia>
@@ -30,6 +30,11 @@
 						<radius>0.021</radius>
 					</sphere>
 				</geometry>
+				<material>
+					<ambient>0.8 0.8 0.8 1</ambient>
+					<diffuse>0.8 0.8 0.8 1</diffuse>
+					<specular>1 1 1 1</specular>
+				</material>
 			</collision>
 		</link>
 	</model>

@@ -4,7 +4,7 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <sdf version="1.7">
-	<!--macro defination: speed monitor 17mm module-->
+	<!--include defination-->
 	<!--rm21_speed_monitor_module example-->
 	<model name="rm21_speed_monitor_module">
 		<pose>0 0 0.2 0 0 0</pose>
@@ -35,13 +35,13 @@
 				</geometry>
 			</collision>
 		</link>
-		<joint name="my_speed_monitor_17mm_joint" type="fixed">
+		<joint name="speed_monitor_17mm_1_joint" type="fixed">
 			<pose relative_to="base_link">0.2 0 0 0 0 0</pose>
 			<parent>base_link</parent>
-			<child>my_speed_monitor_17mm</child>
+			<child>speed_monitor_17mm_1</child>
 		</joint>
-		<link name="my_speed_monitor_17mm">
-			<pose relative_to="my_speed_monitor_17mm_joint">0 0 0 0 0 0</pose>
+		<link name="speed_monitor_17mm_1">
+			<pose relative_to="speed_monitor_17mm_1_joint">0 0 0 0 0 0</pose>
 			<inertial>
 				<pose>0.055 0 0 0 0 0</pose>
 				<mass>0.1</mass>

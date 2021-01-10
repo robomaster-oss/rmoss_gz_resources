@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+    <!--macro defination: light indicator module-->
+    <xacro_define_macro name="light_indicator" params="suffix parent rgb pose">
+        <joint name="light_indicator${suffix}_joint" type="fixed">
+            <pose relative_to="${parent}">${pose}</pose>
+            <parent>${parent}</parent>
+            <child>light_indicator${suffix}</child>
+        </joint>
+        <link name="light_indicator${suffix}">
+            <pose relative_to="light_indicator${suffix}_joint">0 0 0 0 0 0</pose>
+            <inertial>
+                <pose>0 0 0.04 0 0 0</pose>
+                <xacro_macro name="inertia_box" m="0.1" x="0.05" y="0.28" z="0.04"/>
+            </inertial>
+            <visual name="light_indicator_holder_visual">
+                <xacro_macro name="geometry_mesh" uri="model://rm21_light_indicator_module/meshes/light_indicator_holder.dae"/>
+            </visual>
+            <visual name="light_indicator_bar_visual">
+                <xacro_macro name="geometry_mesh" uri="model://rm21_light_indicator_module/meshes/light_indicator_bar.dae"/>
+                <material>
+                    <ambient>${rgb} 1</ambient>
+                    <diffuse>${rgb} 1</diffuse>
+                    <specular>1 1 1 1</specular>
+                    <emissive>${rgb} 1</emissive>
+                </material>
+            </visual>
+            <collision name="light_indicator_bar_collision">
+                <pose>0 0 0.06 0 0 0</pose>
+                <xacro_macro name="geometry_box" x="0.05" y="0.28" z="0.04"/>
+            </collision>
+        </link>
+    </xacro_define_macro>
+</sdf>
