@@ -68,7 +68,13 @@
                 <pose>0 0 0.06 0 0 0</pose>
                 <xacro_macro name="inertia_cylinder"  m="${global_gimbal_yaw_mass}" r="0.05" l="0.17"/>
             </inertial>
-            <xacro_macro name="visual_collision_with_mesh" prefix="gimbal_yaw" uri="model://rmua19_standard_robot/meshes/gimbal_yaw.dae"/>
+            <visual name="visual">
+                <xacro_macro name="geometry_mesh" uri="model://rmua19_standard_robot/meshes/gimbal_yaw.dae"/>
+            </visual>
+            <collision name="collision">
+                <pose>0 0 0.0885 0 0 0</pose>
+                <xacro_macro name="geometry_box" x="0.065" y="0.117" z="0.177"/>
+            </collision>
         </link>
         <!--gimbal pitch module-->
         <joint name="gimbal_pitch_joint" type="revolute">
@@ -89,7 +95,17 @@
                 <pose>0.02 0 0 0 0 0</pose>
                 <xacro_macro name="inertia_box"  m="${global_gimbal_pitch_mass}" x="0.25" y="0.09" z="0.10" />
             </inertial>
-            <xacro_macro name="visual_collision_with_mesh" prefix="gimbal_pitch" uri="model://rmua19_standard_robot/meshes/gimbal_pitch.dae"/>
+            <visual name="visual">
+                <xacro_macro name="geometry_mesh" uri="model://rmua19_standard_robot/meshes/gimbal_pitch.dae"/>
+            </visual>
+            <collision name="collision_main">
+                <pose>0.015 0 0 0 0 0</pose>
+                <xacro_macro name="geometry_box"  x="0.1" y="0.0915" z="0.08"/>
+            </collision>
+            <collision name="collision_box">
+                <pose>-0.011 0 0.043 0 0 0</pose>
+                <xacro_macro name="geometry_box"  x="0.14801" y="0.07" z="0.065"/>
+            </collision>
         </link>
         <!--for referee system -->
         <!--front armors -->

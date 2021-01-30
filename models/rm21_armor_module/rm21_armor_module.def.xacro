@@ -11,7 +11,7 @@
             <pose relative_to="small_armor${suffix}_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0.065 0 0 0</pose>
-                <xacro_macro name="inertia_box"  m="0.1" x="0.012" y="0.141" z="0.13"/>
+                <xacro_macro name="inertia_box"  m="0.1" x="0.0127" y="0.141" z="0.13"/>
             </inertial>
             <visual name="visual">
                 <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor.dae"/>
@@ -48,7 +48,8 @@
                 </material>
             </visual>
             <collision name="collision">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor.dae"/>
+                <pose>0 0 0.065 0 0 0</pose>
+                <xacro_macro name="geometry_box" x="0.0127" y="0.141" z="0.13"/>
             </collision>
             <collision name="target_collision">
                 <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor_target.dae"/>
@@ -66,7 +67,7 @@
             <pose relative_to="large_armor${suffix}_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0.065 0 0 0</pose>
-                <xacro_macro name="inertia_box"  m="0.1" x="0.012" y="0.141" z="0.13"/>
+                <xacro_macro name="inertia_box"  m="0.1" x="0.012" y="0.236" z="0.13"/>
             </inertial>
             <visual name="visual">
                 <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor.dae"/>
@@ -103,7 +104,8 @@
                 </material>
             </visual>
             <collision name="collision">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor.dae"/>
+                <pose>0 0 0.065 0 0 0</pose>
+                <xacro_macro name="geometry_box" x="0.012" y="0.236" z="0.13"/>
             </collision>
             <collision name="target_collision">
                 <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor_target.dae"/>
@@ -127,7 +129,8 @@
                 <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/armor_support_frame.dae"/>
             </visual>
             <collision name="collision">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/armor_support_frame.dae"/>
+                <pose>0.015 0 0 0 0 0</pose>
+                <xacro_macro name="geometry_box" x="0.03" y="0.11" z="0.08"/>
             </collision>
         </link>
     </xacro_define_macro>
