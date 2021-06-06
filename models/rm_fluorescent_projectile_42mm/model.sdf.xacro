@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<sdf version="1.7">
-    <xacro_define_property name="projectile_r" value="0.021" />
-    <xacro_define_property name="projectile_m" value="0.041" />
-    <xacro_include_definition uri="model://rm_fluorescent_projectile_17mm/rm_fluorescent_projectile.def.xacro"/>
-    <model name="rm_projectile_42mm">
-        <xacro_macro name="rm_fluorescent_projectile" m="${projectile_m}" r="${projectile_r}"/>
-    </model>
-</sdf>

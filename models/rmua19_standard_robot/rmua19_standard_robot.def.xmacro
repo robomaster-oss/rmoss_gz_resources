@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
     <!--include defination-->
-    <xacro_include_definition uri="model://rm21_armor_module/rm21_armor_module.def.xacro" />
-    <xacro_include_definition uri="model://rm21_light_indicator_module/rm21_light_indicator_module.def.xacro" />
-    <xacro_include_definition uri="model://rm21_speed_monitor_module/rm21_speed_monitor_module.def.xacro" />
-    <xacro_include_definition uri="model://rmua19_standard_robot/chassis_wheel.def.xacro" />
+    <xacro_include_definition uri="model://rm21_armor_module/rm21_armor_module.def.xmacro" />
+    <xacro_include_definition uri="model://rm21_light_indicator_module/rm21_light_indicator_module.def.xmacro" />
+    <xacro_include_definition uri="model://rm21_speed_monitor_module/rm21_speed_monitor_module.def.xmacro" />
+    <xacro_include_definition uri="model://rmua19_standard_robot/chassis_wheel.def.xmacro" />
     <!--property defination-->
     <xacro_define_property name="global_chassis_mass" value="15.0" />
     <xacro_define_property name="global_gimbal_yaw_mass" value="1.0" />

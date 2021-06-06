@@ -7,14 +7,15 @@
             </inertial>
             <visual name ='visual'>
                 <xacro_macro name="geometry_sphere" r="${r}"/>
+                <material>
+                    <ambient>0 0.6 0 1</ambient>
+                    <diffuse>0 0.6 0 1</diffuse>
+                    <specular>1 1 1 1</specular>
+                    <emissive>0 0.6 0 1 1</emissive>
+                </material>
             </visual>
             <collision name ='collision'>
                 <xacro_macro name="geometry_sphere" r="${r}"/>
-                <material>
-                    <ambient>0.8 0.8 0.8 1</ambient>
-                    <diffuse>0.8 0.8 0.8 1</diffuse>
-                    <specular>1 1 1 1</specular>
-                </material>
             </collision>
         </link>
     </xacro_define_macro>
