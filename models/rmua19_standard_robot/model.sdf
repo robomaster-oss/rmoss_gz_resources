@@ -317,6 +317,11 @@
 					</box>
 				</geometry>
 			</collision>
+			<sensor name="gimbal_yaw_imu" type="imu">
+				<always_on>1</always_on>
+				<update_rate>30</update_rate>
+				<visualize>0</visualize>
+			</sensor>
 		</link>
 		<!--gimbal pitch module-->
 		<joint name="gimbal_pitch_joint" type="revolute">
@@ -368,6 +373,11 @@
 					</box>
 				</geometry>
 			</collision>
+			<sensor name="gimbal_pitch_imu" type="imu">
+				<always_on>1</always_on>
+				<update_rate>30</update_rate>
+				<visualize>0</visualize>
+			</sensor>
 		</link>
 		<!--for referee system -->
 		<!--front armors -->
