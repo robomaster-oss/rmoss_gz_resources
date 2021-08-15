@@ -37,8 +37,7 @@
             </collision>
             <sensor name="chassis_imu" type="imu" >
                 <always_on>1</always_on>
-                <update_rate>30</update_rate>
-                <visualize>0</visualize>
+                <update_rate>200</update_rate>
             </sensor>
         </link>
         <!--front_left wheel link and joint-->
@@ -108,8 +107,7 @@
             </collision>
             <sensor name="gimbal_imu" type="imu" >
                 <always_on>1</always_on>
-                <update_rate>30</update_rate>
-                <visualize>0</visualize>
+                <update_rate>200</update_rate>
             </sensor>
         </link>
         <!--for referee system -->

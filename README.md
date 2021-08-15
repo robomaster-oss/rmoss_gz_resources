@@ -8,8 +8,6 @@ rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)�
   * RoboMaster核心场地道具：弹丸
   * RoboMaster官方机器人模型：RoboMaster University AI Challenge2019标准步兵机器人模型
 
-
-
 ## 1. 模型简介
 
 **裁判系统组件**
@@ -43,7 +41,7 @@ rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)�
 
 ## 3.版权及维护者
 
-* SDF xml file is provided under MIT License.
+* SDF xml file is provided under Apache License 2.0.
 * The copyright of 3D model(.dea,.stl,etc) belongs to the orginal author.
 
 maintanter：Zhenpeng Ge, zhenpeng.ge@qq.com
