@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
      <!--include defination-->
-    <xacro_include_definition uri="model://rm21_light_indicator_module/rm21_light_indicator_module.def.xmacro" />
+    <xmacro_include uri="model://rm21_light_indicator_module/rm21_light_indicator_module.def.xmacro" />
     <!--rm21_light_indicator_module example-->
     <model name='rm21_light_indicator_module'>
         <pose>0 0 0.2 0 0 0</pose>
         <link name="base_link">
             <inertial>
-                <xacro_macro name="inertia_box" m="0.4" x="0.4" y="0.4" z="0.4" />
+                <xmacro_block name="inertia_box" m="0.4" x="0.4" y="0.4" z="0.4" />
             </inertial>
             <visual name="visual">
-                <xacro_macro name="geometry_box" x="0.4" y="0.4" z="0.4" />
+                <xmacro_block name="geometry_box" x="0.4" y="0.4" z="0.4" />
             </visual>
             <collision name="collision">
-                <xacro_macro name="geometry_box" x="0.4" y="0.4" z="0.4" />
+                <xmacro_block name="geometry_box" x="0.4" y="0.4" z="0.4" />
             </collision>
         </link>
-        <xacro_macro name="light_indicator" suffix="" parent="base_link" rgb="1 0 0" pose="0 0 0.2 0 0 0"/>
+        <xmacro_block name="light_indicator" suffix="" parent="base_link" rgb="1 0 0" pose="0 0 0.2 0 0 0"/>
     </model>
 </sdf>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
     <!--macro defination: small armor module-->
-    <xacro_define_macro name="small_armor" params="suffix parent rgb sticker_uri pose">
+    <xmacro_define_block name="small_armor" params="suffix parent rgb sticker_uri pose">
         <joint name="small_armor${suffix}_joint" type="fixed">
             <pose relative_to="${parent}">${pose}</pose>
             <parent>${parent}</parent>
@@ -11,16 +11,16 @@
             <pose relative_to="small_armor${suffix}_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0.065 0 0 0</pose>
-                <xacro_macro name="inertia_box"  m="0.1" x="0.0127" y="0.141" z="0.13"/>
+                <xmacro_block name="inertia_box"  m="0.1" x="0.0127" y="0.141" z="0.13"/>
             </inertial>
             <visual name="visual">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor.dae"/>
             </visual>
             <visual name="target_visual">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor_target.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor_target.dae"/>
             </visual>
             <visual name="light_bar_visual">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor_light_bar.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor_light_bar.dae"/>
                 <material>
                     <ambient>${rgb} 1</ambient>
                     <diffuse>${rgb} 1</diffuse>
@@ -49,15 +49,15 @@
             </visual>
             <collision name="collision">
                 <pose>0 0 0.065 0 0 0</pose>
-                <xacro_macro name="geometry_box" x="0.0127" y="0.141" z="0.13"/>
+                <xmacro_block name="geometry_box" x="0.0127" y="0.141" z="0.13"/>
             </collision>
             <collision name="target_collision">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor_target.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor_target.dae"/>
             </collision>
         </link>
-    </xacro_define_macro>
+    </xmacro_define_block>
     <!--macro defination: large armor module-->
-    <xacro_define_macro name="large_armor" params="suffix parent rgb sticker_uri pose">
+    <xmacro_define_block name="large_armor" params="suffix parent rgb sticker_uri pose">
         <joint name="large_armor${suffix}_joint" type="fixed">
             <pose relative_to="${parent}">${pose}</pose>
             <parent>${parent}</parent>
@@ -67,16 +67,16 @@
             <pose relative_to="large_armor${suffix}_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0.065 0 0 0</pose>
-                <xacro_macro name="inertia_box"  m="0.1" x="0.012" y="0.236" z="0.13"/>
+                <xmacro_block name="inertia_box"  m="0.1" x="0.012" y="0.236" z="0.13"/>
             </inertial>
             <visual name="visual">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor.dae"/>
             </visual>
             <visual name="target_visual">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor_target.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor_target.dae"/>
             </visual>
             <visual name="light_bar_visual">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor_light_bar.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor_light_bar.dae"/>
                 <material>
                     <ambient>${rgb} 1</ambient>
                     <diffuse>${rgb} 1</diffuse>
@@ -105,15 +105,15 @@
             </visual>
             <collision name="collision">
                 <pose>0 0 0.065 0 0 0</pose>
-                <xacro_macro name="geometry_box" x="0.012" y="0.236" z="0.13"/>
+                <xmacro_block name="geometry_box" x="0.012" y="0.236" z="0.13"/>
             </collision>
             <collision name="target_collision">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor_target.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor_target.dae"/>
             </collision>
         </link>
-    </xacro_define_macro>
+    </xmacro_define_block>
     <!--macro defination: armor support frame-->
-    <xacro_define_macro name="armor_support_frame" params="suffix parent pose">
+    <xmacro_define_block name="armor_support_frame" params="suffix parent pose">
         <joint name="armor_support_frame${suffix}_joint" type="fixed">
             <pose relative_to="${parent}">${pose}</pose>
             <parent>${parent}</parent>
@@ -123,25 +123,25 @@
             <pose relative_to="armor_support_frame${suffix}_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0.035 0 0 0 0 0</pose>
-                <xacro_macro name="inertia_box"  m="0.1" x="0.071" y="0.111" z="0.124"/>
+                <xmacro_block name="inertia_box"  m="0.1" x="0.071" y="0.111" z="0.124"/>
             </inertial>
             <visual name="visual">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_armor_module/meshes/armor_support_frame.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/armor_support_frame.dae"/>
             </visual>
             <collision name="collision">
                 <pose>0.015 0 0 0 0 0</pose>
-                <xacro_macro name="geometry_box" x="0.03" y="0.11" z="0.08"/>
+                <xmacro_block name="geometry_box" x="0.03" y="0.11" z="0.08"/>
             </collision>
         </link>
-    </xacro_define_macro>
+    </xmacro_define_block>
     <!--macro defination: small armor module with support frame-->
-    <xacro_define_macro name="small_armor_with_support" params="suffix parent rgb sticker_uri pose">
-        <xacro_macro name="armor_support_frame" suffix="${suffix}" parent="${parent}" pose="${pose}"/>
-        <xacro_macro name="small_armor" suffix="${suffix}" parent="armor_support_frame${suffix}" rgb="${rgb}" sticker_uri="${sticker_uri}" pose="0.075 0 -0.071 0 -0.262 0"/>
-    </xacro_define_macro>
+    <xmacro_define_block name="small_armor_with_support" params="suffix parent rgb sticker_uri pose">
+        <xmacro_block name="armor_support_frame" suffix="${suffix}" parent="${parent}" pose="${pose}"/>
+        <xmacro_block name="small_armor" suffix="${suffix}" parent="armor_support_frame${suffix}" rgb="${rgb}" sticker_uri="${sticker_uri}" pose="0.075 0 -0.071 0 -0.262 0"/>
+    </xmacro_define_block>
     <!--macro defination: large armor module with support frame-->
-    <xacro_define_macro name="large_armor_with_support" params="suffix parent rgb sticker_uri pose">
-        <xacro_macro name="armor_support_frame" suffix="${suffix}" parent="${parent}" pose="${pose}"/>
-        <xacro_macro name="large_armor" suffix="${suffix}" parent="armor_support_frame${suffix}" rgb="${rgb}" sticker_uri="${sticker_uri}" pose="0.075 0 -0.071 0 -0.262 0"/>
-    </xacro_define_macro>
+    <xmacro_define_block name="large_armor_with_support" params="suffix parent rgb sticker_uri pose">
+        <xmacro_block name="armor_support_frame" suffix="${suffix}" parent="${parent}" pose="${pose}"/>
+        <xmacro_block name="large_armor" suffix="${suffix}" parent="armor_support_frame${suffix}" rgb="${rgb}" sticker_uri="${sticker_uri}" pose="0.075 0 -0.071 0 -0.262 0"/>
+    </xmacro_define_block>
 </sdf>

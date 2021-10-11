@@ -37,7 +37,7 @@ rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)�
 ## 2. 建模Tip
 
 * 先使用SW，blender等3D建模工具进行建模，然后再把各个模块（依照可活动关节分离）导出STL或dea文件。
-* 然后编写SDF文件（采用[xacro4sdf](https://github.com/gezp/xacro4sdf) 宏工具进行`模块化建模`）。
+* 然后编写SDF文件（采用[xmacro](https://github.com/gezp/xmacro) 宏工具进行`模块化建模`）。
 
 ## 3.版权及维护者
 

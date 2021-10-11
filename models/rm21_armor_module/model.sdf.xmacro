@@ -1,30 +1,30 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
     <!--include defination-->
-    <xacro_include_definition uri="model://rm21_armor_module/rm21_armor_module.def.xmacro" />
+    <xmacro_include uri="model://rm21_armor_module/rm21_armor_module.def.xmacro" />
     <!--property defination-->
-    <xacro_define_property name="global_armor_sticker_map_uri" value="model://rm21_armor_module/materials/textures/armor_sticker_num1.png" />
+    <xmacro_define_value name="global_armor_sticker_map_uri" value="model://rm21_armor_module/materials/textures/armor_sticker_num1.png" />
     <!--rm21_armor_module example-->
     <model name='rm21_armor_module'>
         <pose>0 0 0.2 0 0 0</pose>
         <link name="base_link">
             <inertial>
-                <xacro_macro name="inertia_box" m="0.4" x="0.4" y="0.4" z="0.4" />
+                <xmacro_block name="inertia_box" m="0.4" x="0.4" y="0.4" z="0.4" />
             </inertial>
             <visual name="visual">
-                <xacro_macro name="geometry_box" x="0.4" y="0.4" z="0.4" />
+                <xmacro_block name="geometry_box" x="0.4" y="0.4" z="0.4" />
             </visual>
             <collision name="collision">
-                <xacro_macro name="geometry_box" x="0.4" y="0.4" z="0.4" />
+                <xmacro_block name="geometry_box" x="0.4" y="0.4" z="0.4" />
             </collision>
         </link>
-        <xacro_macro name="small_armor" suffix="_1" parent="base_link" rgb="1 0 0" 
+        <xmacro_block name="small_armor" suffix="_1" parent="base_link" rgb="1 0 0" 
                 sticker_uri="${global_armor_sticker_map_uri}" pose="0 -0.15 0.2 0 0 0"/>
-        <xacro_macro name="large_armor" suffix="_2" parent="base_link" rgb="1 0 0" 
+        <xmacro_block name="large_armor" suffix="_2" parent="base_link" rgb="1 0 0" 
                 sticker_uri="${global_armor_sticker_map_uri}" pose="0 0.15 0.2 0 0 0"/>
-        <xacro_macro name="small_armor_with_support" suffix="_3" parent="base_link" rgb="1 0 0" 
+        <xmacro_block name="small_armor_with_support" suffix="_3" parent="base_link" rgb="1 0 0" 
                 sticker_uri="${global_armor_sticker_map_uri}" pose="0.2 0 0 0 0 0"/>
-        <xacro_macro name="large_armor_with_support" suffix="_4" parent="base_link" rgb="1 0 0" 
+        <xmacro_block name="large_armor_with_support" suffix="_4" parent="base_link" rgb="1 0 0" 
                 sticker_uri="${global_armor_sticker_map_uri}" pose="0 0.2 0 0 0 1.57"/>
     </model>
 </sdf>

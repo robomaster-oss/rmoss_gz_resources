@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
     <!--macro defination: speed monitor 17mm module-->
-    <xacro_define_macro name="speed_monitor_17mm" params="suffix parent rgb pose">
+    <xmacro_define_block name="speed_monitor_17mm" params="suffix parent rgb pose">
         <joint name="speed_monitor_17mm${suffix}_joint" type="fixed">
             <pose relative_to="${parent}">${pose}</pose>
             <parent>${parent}</parent>
@@ -11,13 +11,13 @@
             <pose relative_to="speed_monitor_17mm${suffix}_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0.055 0 0 0 0 0</pose>
-                <xacro_macro name="inertia_box" m="0.1" x="0.11" y="0.043" z="0.041"/>
+                <xmacro_block name="inertia_box" m="0.1" x="0.11" y="0.043" z="0.041"/>
             </inertial>
             <visual name="visual">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_speed_monitor_module/meshes/speed_monitor_17mm.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_speed_monitor_module/meshes/speed_monitor_17mm.dae"/>
             </visual>
             <visual name="light_bar_visual">
-                <xacro_macro name="geometry_mesh" uri="model://rm21_speed_monitor_module/meshes/speed_monitor_17mm_light_bar.dae"/>
+                <xmacro_block name="geometry_mesh" uri="model://rm21_speed_monitor_module/meshes/speed_monitor_17mm_light_bar.dae"/>
                 <material>
                     <ambient>${rgb} 1</ambient>
                     <diffuse>${rgb} 1</diffuse>
@@ -27,8 +27,8 @@
             </visual>
             <collision name="collision">
                 <pose>0.055 0 0 0 0 0</pose>
-                <xacro_macro name="geometry_box" x="0.11" y="0.043" z="0.041"/>
+                <xmacro_block name="geometry_box" x="0.11" y="0.043" z="0.041"/>
             </collision>
         </link>
-    </xacro_define_macro>
+    </xmacro_define_block>
 </sdf>
