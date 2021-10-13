@@ -61,20 +61,19 @@
 					</mesh>
 				</geometry>
 			</visual>
-			<visual name="light_indicator_bar_visual">
+			<visual name="light_bar_visual">
 				<geometry>
 					<mesh>
 						<uri>model://rm21_light_indicator_module/meshes/light_indicator_bar.dae</uri>
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 0 0 1</ambient>
-					<diffuse>1 0 0 1</diffuse>
-					<specular>1 1 1 1</specular>
-					<emissive>1 0 0 1</emissive>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>1.0 1.0 1.0</specular>
+					<ambient>1.0 1.0 1.0</ambient>
 				</material>
 			</visual>
-			<collision name="light_indicator_bar_collision">
+			<collision name="light_bar_collision">
 				<pose>0 0 0.06 0 0 0</pose>
 				<geometry>
 					<box>

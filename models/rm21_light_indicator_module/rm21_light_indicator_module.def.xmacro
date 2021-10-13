@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
     <!--macro defination: light indicator module-->
-    <xmacro_define_block name="light_indicator" params="suffix parent rgb pose">
+    <xmacro_define_block name="light_indicator" params="suffix parent pose">
         <joint name="light_indicator${suffix}_joint" type="fixed">
             <pose relative_to="${parent}">${pose}</pose>
             <parent>${parent}</parent>
@@ -16,16 +16,15 @@
             <visual name="light_indicator_holder_visual">
                 <xmacro_block name="geometry_mesh" uri="model://rm21_light_indicator_module/meshes/light_indicator_holder.dae"/>
             </visual>
-            <visual name="light_indicator_bar_visual">
+            <visual name="light_bar_visual">
                 <xmacro_block name="geometry_mesh" uri="model://rm21_light_indicator_module/meshes/light_indicator_bar.dae"/>
                 <material>
-                    <ambient>${rgb} 1</ambient>
-                    <diffuse>${rgb} 1</diffuse>
-                    <specular>1 1 1 1</specular>
-                    <emissive>${rgb} 1</emissive>
+                    <diffuse>1.0 1.0 1.0</diffuse>
+                    <specular>1.0 1.0 1.0</specular>
+                    <ambient>1.0 1.0 1.0</ambient>
                 </material>
             </visual>
-            <collision name="light_indicator_bar_collision">
+            <collision name="light_bar_collision">
                 <pose>0 0 0.06 0 0 0</pose>
                 <xmacro_block name="geometry_box" x="0.05" y="0.28" z="0.04"/>
             </collision>

@@ -35,13 +35,13 @@
 				</geometry>
 			</collision>
 		</link>
-		<joint name="speed_monitor_17mm_1_joint" type="fixed">
+		<joint name="speed_monitor_1_joint" type="fixed">
 			<pose relative_to="base_link">0.2 0 0 0 0 0</pose>
 			<parent>base_link</parent>
-			<child>speed_monitor_17mm_1</child>
+			<child>speed_monitor_1</child>
 		</joint>
-		<link name="speed_monitor_17mm_1">
-			<pose relative_to="speed_monitor_17mm_1_joint">0 0 0 0 0 0</pose>
+		<link name="speed_monitor_1">
+			<pose relative_to="speed_monitor_1_joint">0 0 0 0 0 0</pose>
 			<inertial>
 				<pose>0.055 0 0 0 0 0</pose>
 				<mass>0.1</mass>
@@ -68,10 +68,9 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 0 0 1</ambient>
-					<diffuse>1 0 0 1</diffuse>
-					<specular>1 1 1 1</specular>
-					<emissive>1 0 0 1</emissive>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>1.0 1.0 1.0</specular>
+					<ambient>1.0 1.0 1.0</ambient>
 				</material>
 			</visual>
 			<collision name="collision">

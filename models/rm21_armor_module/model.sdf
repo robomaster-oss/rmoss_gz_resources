@@ -36,13 +36,13 @@
 				</geometry>
 			</collision>
 		</link>
-		<joint name="small_armor_1_joint" type="fixed">
+		<joint name="armor_1_joint" type="fixed">
 			<pose relative_to="base_link">0 -0.15 0.2 0 0 0</pose>
 			<parent>base_link</parent>
-			<child>small_armor_1</child>
+			<child>armor_1</child>
 		</joint>
-		<link name="small_armor_1">
-			<pose relative_to="small_armor_1_joint">0 0 0 0 0 0</pose>
+		<link name="armor_1">
+			<pose relative_to="armor_1_joint">0 0 0 0 0 0</pose>
 			<inertial>
 				<pose>0 0 0.065 0 0 0</pose>
 				<mass>0.1</mass>
@@ -76,10 +76,9 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 0 0 1</ambient>
-					<diffuse>1 0 0 1</diffuse>
+					<ambient>1 1 1 1</ambient>
+					<diffuse>1 1 1 1</diffuse>
 					<specular>1 1 1 1</specular>
-					<emissive>1 0 0 1</emissive>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
@@ -117,13 +116,13 @@
 				</geometry>
 			</collision>
 		</link>
-		<joint name="large_armor_2_joint" type="fixed">
+		<joint name="armor_2_joint" type="fixed">
 			<pose relative_to="base_link">0 0.15 0.2 0 0 0</pose>
 			<parent>base_link</parent>
-			<child>large_armor_2</child>
+			<child>armor_2</child>
 		</joint>
-		<link name="large_armor_2">
-			<pose relative_to="large_armor_2_joint">0 0 0 0 0 0</pose>
+		<link name="armor_2">
+			<pose relative_to="armor_2_joint">0 0 0 0 0 0</pose>
 			<inertial>
 				<pose>0 0 0.065 0 0 0</pose>
 				<mass>0.1</mass>
@@ -157,10 +156,9 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 0 0 1</ambient>
-					<diffuse>1 0 0 1</diffuse>
-					<specular>1 1 1 1</specular>
-					<emissive>1 0 0 1</emissive>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>1.0 1.0 1.0</specular>
+					<ambient>1.0 1.0 1.0</ambient>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
@@ -233,13 +231,13 @@
 				</geometry>
 			</collision>
 		</link>
-		<joint name="small_armor_3_joint" type="fixed">
+		<joint name="armor_3_joint" type="fixed">
 			<pose relative_to="armor_support_frame_3">0.075 0 -0.071 0 -0.262 0</pose>
 			<parent>armor_support_frame_3</parent>
-			<child>small_armor_3</child>
+			<child>armor_3</child>
 		</joint>
-		<link name="small_armor_3">
-			<pose relative_to="small_armor_3_joint">0 0 0 0 0 0</pose>
+		<link name="armor_3">
+			<pose relative_to="armor_3_joint">0 0 0 0 0 0</pose>
 			<inertial>
 				<pose>0 0 0.065 0 0 0</pose>
 				<mass>0.1</mass>
@@ -273,10 +271,9 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 0 0 1</ambient>
-					<diffuse>1 0 0 1</diffuse>
+					<ambient>1 1 1 1</ambient>
+					<diffuse>1 1 1 1</diffuse>
 					<specular>1 1 1 1</specular>
-					<emissive>1 0 0 1</emissive>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
@@ -349,13 +346,13 @@
 				</geometry>
 			</collision>
 		</link>
-		<joint name="large_armor_4_joint" type="fixed">
+		<joint name="armor_4_joint" type="fixed">
 			<pose relative_to="armor_support_frame_4">0.075 0 -0.071 0 -0.262 0</pose>
 			<parent>armor_support_frame_4</parent>
-			<child>large_armor_4</child>
+			<child>armor_4</child>
 		</joint>
-		<link name="large_armor_4">
-			<pose relative_to="large_armor_4_joint">0 0 0 0 0 0</pose>
+		<link name="armor_4">
+			<pose relative_to="armor_4_joint">0 0 0 0 0 0</pose>
 			<inertial>
 				<pose>0 0 0.065 0 0 0</pose>
 				<mass>0.1</mass>
@@ -389,10 +386,9 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 0 0 1</ambient>
-					<diffuse>1 0 0 1</diffuse>
-					<specular>1 1 1 1</specular>
-					<emissive>1 0 0 1</emissive>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>1.0 1.0 1.0</specular>
+					<ambient>1.0 1.0 1.0</ambient>
 				</material>
 			</visual>
 			<visual name="sticker_visual">

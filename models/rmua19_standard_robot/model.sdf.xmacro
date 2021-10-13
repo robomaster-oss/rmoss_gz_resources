@@ -3,13 +3,24 @@
     <!--include defination-->
     <xmacro_include uri="model://rmua19_standard_robot/rmua19_standard_robot.def.xmacro" />
     <!--property defination-->
-    <xmacro_define_value name="global_light_bar_rgb" value="1 0 0" />
+    <xmacro_define_value name="global_initial_color" value="none" />
     <xmacro_define_value name="global_armor_sticker_map_uri" value="model://rm21_armor_module/materials/textures/armor_sticker_num1.png" />
     <!--rmua19_standard_robot model-->
     <model name="rmua19_standard_robot">
         <pose>0 0 0.15 0 0 0</pose>
-        <xmacro_block name="rmua19_standard_robot" light_bar_rgb="${global_light_bar_rgb}" armor_sticker_map_uri="${global_armor_sticker_map_uri}"/>
+        <xmacro_block name="rmua19_standard_robot" armor_sticker_map_uri="${global_armor_sticker_map_uri}"/>
         <!--plugins-->
+        <!--plugin for light bar-->
+        <plugin filename="LightBarController" name="ignition::gazebo::systems::LightBarController">
+            <controller_name>color</controller_name>
+            <link_visual>armor_0/light_bar_visual</link_visual>
+            <link_visual>armor_1/light_bar_visual</link_visual>
+            <link_visual>armor_2/light_bar_visual</link_visual>
+            <link_visual>armor_3/light_bar_visual</link_visual>
+            <link_visual>light_indicator/light_bar_visual</link_visual>
+            <link_visual>speed_monitor/light_bar_visual</link_visual>
+            <initial_color>${global_initial_color}</initial_color>
+        </plugin>
         <!--plugin for joint state sensor-->
         <plugin filename="ignition-gazebo-joint-state-publisher-system" 
                 name="ignition::gazebo::systems::JointStatePublisher">

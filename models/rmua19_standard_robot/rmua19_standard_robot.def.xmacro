@@ -6,7 +6,7 @@
     <xmacro_include uri="model://rm21_speed_monitor_module/rm21_speed_monitor_module.def.xmacro" />
     <xmacro_include uri="model://rmua19_standard_robot/chassis_wheel.def.xmacro" />
     <!--macro defination: rmua19_standard_robot-->
-    <xmacro_define_block name="rmua19_standard_robot" params="light_bar_rgb armor_sticker_map_uri">
+    <xmacro_define_block name="rmua19_standard_robot" params="armor_sticker_map_uri">
         <!--chassis-->
         <link name="chassis" >
             <inertial>
@@ -108,20 +108,20 @@
         </link>
         <!--for referee system -->
         <!--front armors -->
-        <xmacro_block name="small_armor_with_support" suffix="_0" parent="chassis" rgb="${light_bar_rgb}" 
+        <xmacro_block name="small_armor_with_support" suffix="_0" parent="chassis"  
                 sticker_uri="${armor_sticker_map_uri}" pose="0.197 0 0.061 0 0 0"/>
         <!--left armors -->
-        <xmacro_block name="small_armor_with_support" suffix="_1" parent="chassis" rgb="${light_bar_rgb}"
+        <xmacro_block name="small_armor_with_support" suffix="_1" parent="chassis" 
                 sticker_uri="${armor_sticker_map_uri}" pose="0 0.116 0.061 0 0 1.5708"/>
         <!--rear armors -->
-        <xmacro_block name="small_armor_with_support" suffix="_2" parent="chassis" rgb="${light_bar_rgb}"
+        <xmacro_block name="small_armor_with_support" suffix="_2" parent="chassis" 
                 sticker_uri="${armor_sticker_map_uri}" pose="-0.197 0 0.061 0 0 3.14"/>
         <!--right armors -->
-        <xmacro_block name="small_armor_with_support" suffix="_3" parent="chassis" rgb="${light_bar_rgb}" 
+        <xmacro_block name="small_armor_with_support" suffix="_3" parent="chassis" 
                 sticker_uri="${armor_sticker_map_uri}" pose="0 -0.116 0.061 0 0 -1.5708"/>
         <!--light_indicator-->
-        <xmacro_block name="light_indicator" suffix="" parent="chassis" rgb="${light_bar_rgb}" pose="-0.207 0 0.1 0 0 0"/>
+        <xmacro_block name="light_indicator" suffix="" parent="chassis" pose="-0.207 0 0.1 0 0 0"/>
         <!--speed_monitor_17mm-->
-        <xmacro_block name="speed_monitor_17mm" suffix="" parent="gimbal_pitch" rgb="${light_bar_rgb}" pose="0.07 0 0 0 0 0"/>
+        <xmacro_block name="speed_monitor_17mm" suffix="" parent="gimbal_pitch" pose="0.07 0 0 0 0 0"/>
     </xmacro_define_block>
 </sdf>

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
     <!--macro defination: speed monitor 17mm module-->
-    <xmacro_define_block name="speed_monitor_17mm" params="suffix parent rgb pose">
-        <joint name="speed_monitor_17mm${suffix}_joint" type="fixed">
+    <xmacro_define_block name="speed_monitor_17mm" params="suffix parent pose">
+        <joint name="speed_monitor${suffix}_joint" type="fixed">
             <pose relative_to="${parent}">${pose}</pose>
             <parent>${parent}</parent>
-            <child>speed_monitor_17mm${suffix}</child>
+            <child>speed_monitor${suffix}</child>
         </joint>
-        <link name="speed_monitor_17mm${suffix}">
-            <pose relative_to="speed_monitor_17mm${suffix}_joint">0 0 0 0 0 0</pose>
+        <link name="speed_monitor${suffix}">
+            <pose relative_to="speed_monitor${suffix}_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0.055 0 0 0 0 0</pose>
                 <xmacro_block name="inertia_box" m="0.1" x="0.11" y="0.043" z="0.041"/>
@@ -19,10 +19,9 @@
             <visual name="light_bar_visual">
                 <xmacro_block name="geometry_mesh" uri="model://rm21_speed_monitor_module/meshes/speed_monitor_17mm_light_bar.dae"/>
                 <material>
-                    <ambient>${rgb} 1</ambient>
-                    <diffuse>${rgb} 1</diffuse>
-                    <specular>1 1 1 1</specular>
-                    <emissive>${rgb} 1</emissive>
+                    <diffuse>1.0 1.0 1.0</diffuse>
+                    <specular>1.0 1.0 1.0</specular>
+                    <ambient>1.0 1.0 1.0</ambient>
                 </material>
             </visual>
             <collision name="collision">
