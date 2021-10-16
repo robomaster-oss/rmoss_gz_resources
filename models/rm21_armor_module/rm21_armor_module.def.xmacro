@@ -1,5 +1,26 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
+    <xmacro_define_block name = "armor_sticker_visual_with_albedo_map" params = "sticker_uri">
+        <visual name="sticker_visual">
+            <pose>0.014 0 0.065 1.5708 0 1.5708</pose>
+            <geometry>
+                <plane>
+                    <normal>0 0 1</normal>
+                    <size>0.1 0.1</size>
+                </plane>
+            </geometry>
+            <material>
+                <diffuse>1.0 1.0 1.0</diffuse>
+                <specular>1.0 1.0 1.0</specular>
+                <ambient>1.0 1.0 1.0</ambient>
+                <pbr>
+                    <metal>
+                        <albedo_map>${sticker_uri}</albedo_map>
+                    </metal>
+                </pbr>
+            </material>
+        </visual>
+    </xmacro_define_block>
     <!--macro defination: small armor module-->
     <xmacro_define_block name="small_armor" params="suffix parent sticker_uri pose">
         <joint name="armor${suffix}_joint" type="fixed">
@@ -27,25 +48,7 @@
                     <specular>1 1 1 1</specular>
                 </material>
             </visual>
-            <visual name="sticker_visual">
-                <pose>0.014 0 0.065 1.5708 0 1.5708</pose>
-                <geometry>
-                    <plane>
-                        <normal>0 0 1</normal>
-                        <size>0.1 0.1</size>
-                    </plane>
-                </geometry>
-                <material>
-                    <diffuse>1.0 1.0 1.0</diffuse>
-                    <specular>1.0 1.0 1.0</specular>
-                    <ambient>1.0 1.0 1.0</ambient>
-                    <pbr>
-                        <metal>
-                            <albedo_map>${sticker_uri}</albedo_map>
-                        </metal>
-                    </pbr>
-                </material>
-            </visual>
+            <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="${sticker_uri}" condition="${sticker_uri!=''}"/>
             <collision name="collision">
                 <pose>0 0 0.065 0 0 0</pose>
                 <xmacro_block name="geometry_box" x="0.0127" y="0.141" z="0.13"/>
@@ -82,25 +85,7 @@
                     <ambient>1.0 1.0 1.0</ambient>
                 </material>
             </visual>
-            <visual name="sticker_visual">
-                <pose>0.014 0 0.065 1.5708 0 1.5708</pose>
-                <geometry>
-                    <plane>
-                        <normal>0 0 1</normal>
-                        <size>0.1 0.1</size>
-                    </plane>
-                </geometry>
-                <material>
-                    <diffuse>1.0 1.0 1.0</diffuse>
-                    <specular>1.0 1.0 1.0</specular>
-                    <ambient>1.0 1.0 1.0</ambient>
-                    <pbr>
-                        <metal>
-                            <albedo_map>${sticker_uri}</albedo_map>
-                        </metal>
-                    </pbr>
-                </material>
-            </visual>
+            <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="${sticker_uri}" condition="${sticker_uri!=''}"/>
             <collision name="collision">
                 <pose>0 0 0.065 0 0 0</pose>
                 <xmacro_block name="geometry_box" x="0.012" y="0.236" z="0.13"/>
