@@ -12,7 +12,6 @@ install( DIRECTORY
 
 #environment hooks, ROS 2 >=Eloquent
 ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/ignition.dsv.in")
-ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/gazebo.dsv.in")
 
 #test
 if(BUILD_TESTING)

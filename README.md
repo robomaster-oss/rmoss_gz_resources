@@ -12,14 +12,23 @@ rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)�
 
 采用[xmacro](https://github.com/gezp/xmacro)方式定义了宏模块，可以方便的被复用。
 
+RoboMaster2021赛季裁判系统
+
 * rm21_light_indicator_module（灯条模块）： `light_indicator`
 * rm21_armor_module（装甲板模块）：`small_armor`, `large_armor`, `small_armor_with_support`, `large_armor_with_support`
 * rm21_light_indicator_module（灯条指示模块）：`light_indicator` 
-* rm21_speed_monitor_module（枪口测速模块）：`speed_monitor_17mm`, `speed_monitor_42mm`
+* rm21_speed_monitor_module（枪口测速模块）：`speed_monitor_17mm`, `speed_monitor_42mm`(TODO)
 
-- video_transmitter_module（图传模块）：`video_transmitter` (TODO)
+* rm21_video_transmitter_module（图传模块）：`video_transmitter` (TODO)
 
-- rfid_interaction_module（RFID模块）：暂不考虑，需要等待Ignition Gazebo的支持。
+* rm21_rfid_interaction_module（RFID模块）：暂不考虑，需要等待Ignition Gazebo的支持。
+
+RoboMaster2022赛季裁判系统
+
+* rm22_armor_module, rm22_light_indicator_module, rm22_speed_monitor_module
+
+> 对于RM2022赛季，裁判系统变化不大，但由于考虑到命名一致性，应使用`rm22_*`系列模块，使用方式不发生变化，即`xmacro_block`的name保持不变。
+
 
 在xmacro文件中，可直接使用这些模块，在每一个模块下，都定义了一个使用样例`model.sdf.xmacro`可以参考。同时也可以使用多个模块，例如在`models/rmua19_standard_robot/rmua19_standard_robot.def.xmacro`中。
 

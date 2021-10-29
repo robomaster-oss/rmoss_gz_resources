@@ -5,8 +5,8 @@
 <!-- =================================================================================== -->
 <sdf version="1.7">
 	<!--include defination-->
-	<!--rm21_light_indicator_module example-->
-	<model name="rm21_light_indicator_module">
+	<!--rm22_light_indicator_module example-->
+	<model name="rm22_light_indicator_module">
 		<pose>0 0 0.2 0 0 0</pose>
 		<link name="base_link">
 			<inertial>

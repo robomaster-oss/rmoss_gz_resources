@@ -5,8 +5,8 @@
 <!-- =================================================================================== -->
 <sdf version="1.7">
 	<!--include defination-->
-	<!--rm21_light_indicator_module example-->
-	<model name="rm21_light_indicator_module">
+	<!--rm22_speed_monitor_module example-->
+	<model name="rm22_speed_monitor_module">
 		<pose>0 0 0.2 0 0 0</pose>
 		<link name="base_link">
 			<inertial>
@@ -35,36 +35,36 @@
 				</geometry>
 			</collision>
 		</link>
-		<joint name="light_indicator_joint" type="fixed">
-			<pose relative_to="base_link">0 0 0.2 0 0 0</pose>
+		<joint name="speed_monitor_1_joint" type="fixed">
+			<pose relative_to="base_link">0.2 0 0 0 0 0</pose>
 			<parent>base_link</parent>
-			<child>light_indicator</child>
+			<child>speed_monitor_1</child>
 		</joint>
-		<link name="light_indicator">
-			<pose relative_to="light_indicator_joint">0 0 0 0 0 0</pose>
+		<link name="speed_monitor_1">
+			<pose relative_to="speed_monitor_1_joint">0 0 0 0 0 0</pose>
 			<inertial>
-				<pose>0 0 0.04 0 0 0</pose>
+				<pose>0.055 0 0 0 0 0</pose>
 				<mass>0.1</mass>
 				<inertia>
-					<ixx>0.0006666666666666669</ixx>
+					<ixx>2.941666666666667e-05</ixx>
 					<ixy>0</ixy>
 					<ixz>0</ixz>
-					<iyy>3.416666666666667e-05</iyy>
+					<iyy>0.00011484166666666668</iyy>
 					<iyz>0</iyz>
-					<izz>0.0006741666666666668</izz>
+					<izz>0.00011624166666666668</izz>
 				</inertia>
 			</inertial>
-			<visual name="light_indicator_holder_visual">
+			<visual name="visual">
 				<geometry>
 					<mesh>
-						<uri>model://rm21_light_indicator_module/meshes/light_indicator_holder.dae</uri>
+						<uri>model://rm21_speed_monitor_module/meshes/speed_monitor_17mm.dae</uri>
 					</mesh>
 				</geometry>
 			</visual>
 			<visual name="light_bar_visual">
 				<geometry>
 					<mesh>
-						<uri>model://rm21_light_indicator_module/meshes/light_indicator_bar.dae</uri>
+						<uri>model://rm21_speed_monitor_module/meshes/speed_monitor_17mm_light_bar.dae</uri>
 					</mesh>
 				</geometry>
 				<material>
@@ -73,11 +73,11 @@
 					<ambient>1.0 1.0 1.0</ambient>
 				</material>
 			</visual>
-			<collision name="light_bar_collision">
-				<pose>0 0 0.06 0 0 0</pose>
+			<collision name="collision">
+				<pose>0.055 0 0 0 0 0</pose>
 				<geometry>
 					<box>
-						<size>0.05 0.28 0.04</size>
+						<size>0.11 0.043 0.041</size>
 					</box>
 				</geometry>
 			</collision>
