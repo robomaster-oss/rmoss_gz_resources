@@ -6,11 +6,11 @@ rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)�
 * 标准射击弹丸：17mm荧光弹，42mm荧光弹
 * 标准机器人：RoboMaster University AI Challenge2019标准步兵机器人模型
 
+采用[xmacro](https://github.com/gezp/xmacro)方式定义了宏模块，可以方便的被复用。在机器人SDF模型模块化构建中，遵循`控制器分离原则`，即对于SDF模型，将3D模型部分与控制器（也就是插件）不耦合在一起，这样可以更换使用自己的控制器，使用更加灵活。
+
 ## 模型简介
 
 #### 裁判系统组件
-
-采用[xmacro](https://github.com/gezp/xmacro)方式定义了宏模块，可以方便的被复用。
 
 RoboMaster2021赛季裁判系统
 
