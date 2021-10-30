@@ -14,7 +14,6 @@ rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)�
 
 RoboMaster2021赛季裁判系统
 
-* rm21_light_indicator_module（灯条模块）： `light_indicator`
 * rm21_armor_module（装甲板模块）：`small_armor`, `large_armor`, `small_armor_with_support`, `large_armor_with_support`
 * rm21_light_indicator_module（灯条指示模块）：`light_indicator` 
 * rm21_speed_monitor_module（枪口测速模块）：`speed_monitor_17mm`, `speed_monitor_42mm`(TODO)
