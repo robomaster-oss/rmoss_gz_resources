@@ -11,6 +11,10 @@
             </inertial>
             <visual name="visual">
                 <xmacro_block name="geometry_box" x="0.4" y="0.4" z="0.4" />
+                <material>
+                    <ambient>0.6 0.6 0.6 1</ambient>
+                    <diffuse>0.6 0.6 0.6 1</diffuse>
+                </material>
             </visual>
             <collision name="collision">
                 <xmacro_block name="geometry_box" x="0.4" y="0.4" z="0.4" />
