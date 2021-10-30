@@ -6,18 +6,19 @@
     <xmacro_include uri="model://rm21_speed_monitor_module/rm21_speed_monitor_module.def.xmacro" />
     <xmacro_include uri="model://rmua19_standard_robot/chassis_wheel.def.xmacro" />
     <!--macro defination: rmua19_standard_robot-->
-    <xmacro_define_block name="rmua19_standard_robot" params="armor_sticker_map_uri">
+    <xmacro_define_block name="rmua19_standard_robot" params="sticker_type">
         <!--chassis-->
         <link name="chassis" >
             <inertial>
-                <xmacro_block name="inertia_box"  m="15.0" x="0.36" y="0.24" z="0.15"/>
+                <pose>0 0 0.055 0 0 0</pose>
+                <xmacro_block name="inertia_box"  m="15.0" x="0.36" y="0.24" z="0.13"/>
             </inertial>
             <visual name="chassis_visual">
                 <xmacro_block name="geometry_mesh" uri="model://rmua19_standard_robot/meshes/chassis_base.dae"/>
             </visual>
             <collision name="chassis_base_collision">
-                <pose>0 0 0.055 0 0 0</pose>
-                <xmacro_block name="geometry_box" x="0.36" y="0.24" z="0.15"/>
+                <pose>0 0 0.045 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.36" y="0.24" z="0.13"/>
             </collision>
             <collision name="chassis_projectile_container_collision">
                 <pose>-0.122 0 0.177 0 0 0</pose>
@@ -109,16 +110,16 @@
         <!--for referee system -->
         <!--front armors -->
         <xmacro_block name="small_armor_with_support" suffix="_0" parent="chassis"  
-                sticker_uri="${armor_sticker_map_uri}" pose="0.197 0 0.061 0 0 0"/>
+                sticker_type="${sticker_type}" pose="0.197 0 0.061 0 0 0"/>
         <!--left armors -->
         <xmacro_block name="small_armor_with_support" suffix="_1" parent="chassis" 
-                sticker_uri="${armor_sticker_map_uri}" pose="0 0.116 0.061 0 0 1.5708"/>
+                sticker_type="${sticker_type}" pose="0 0.116 0.061 0 0 1.5708"/>
         <!--rear armors -->
         <xmacro_block name="small_armor_with_support" suffix="_2" parent="chassis" 
-                sticker_uri="${armor_sticker_map_uri}" pose="-0.197 0 0.061 0 0 3.14"/>
+                sticker_type="${sticker_type}" pose="-0.197 0 0.061 0 0 3.14"/>
         <!--right armors -->
         <xmacro_block name="small_armor_with_support" suffix="_3" parent="chassis" 
-                sticker_uri="${armor_sticker_map_uri}" pose="0 -0.116 0.061 0 0 -1.5708"/>
+                sticker_type="${sticker_type}" pose="0 -0.116 0.061 0 0 -1.5708"/>
         <!--light_indicator-->
         <xmacro_block name="light_indicator" suffix="" parent="chassis" pose="-0.207 0 0.1 0 0 0"/>
         <!--speed_monitor_17mm-->

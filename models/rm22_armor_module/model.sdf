@@ -5,7 +5,6 @@
 <!-- =================================================================================== -->
 <sdf version="1.7">
 	<!--include defination-->
-	<!--property defination-->
 	<!--rm22_armor_module example-->
 	<model name="rm22_armor_module">
 		<pose>0 0 0.2 0 0 0</pose>
@@ -142,6 +141,25 @@
 					<ambient>1.0 1.0 1.0</ambient>
 				</material>
 			</visual>
+			<visual name="sticker_visual">
+				<pose>0.014 0 0.065 1.5708 0 1.5708</pose>
+				<geometry>
+					<plane>
+						<normal>0 0 1</normal>
+						<size>0.1 0.1</size>
+					</plane>
+				</geometry>
+				<material>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>1.0 1.0 1.0</specular>
+					<ambient>1.0 1.0 1.0</ambient>
+					<pbr>
+						<metal>
+							<albedo_map>model://rm21_armor_module/materials/textures/armor_sticker_num1.png</albedo_map>
+						</metal>
+					</pbr>
+				</material>
+			</visual>
 			<collision name="collision">
 				<pose>0 0 0.065 0 0 0</pose>
 				<geometry>
@@ -238,6 +256,25 @@
 					<specular>1 1 1 1</specular>
 				</material>
 			</visual>
+			<visual name="sticker_visual">
+				<pose>0.014 0 0.065 1.5708 0 1.5708</pose>
+				<geometry>
+					<plane>
+						<normal>0 0 1</normal>
+						<size>0.1 0.1</size>
+					</plane>
+				</geometry>
+				<material>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>1.0 1.0 1.0</specular>
+					<ambient>1.0 1.0 1.0</ambient>
+					<pbr>
+						<metal>
+							<albedo_map>model://rm21_armor_module/materials/textures/armor_sticker_num2.png</albedo_map>
+						</metal>
+					</pbr>
+				</material>
+			</visual>
 			<collision name="collision">
 				<pose>0 0 0.065 0 0 0</pose>
 				<geometry>
@@ -332,6 +369,25 @@
 					<diffuse>1.0 1.0 1.0</diffuse>
 					<specular>1.0 1.0 1.0</specular>
 					<ambient>1.0 1.0 1.0</ambient>
+				</material>
+			</visual>
+			<visual name="sticker_visual">
+				<pose>0.014 0 0.065 1.5708 0 1.5708</pose>
+				<geometry>
+					<plane>
+						<normal>0 0 1</normal>
+						<size>0.1 0.1</size>
+					</plane>
+				</geometry>
+				<material>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>1.0 1.0 1.0</specular>
+					<ambient>1.0 1.0 1.0</ambient>
+					<pbr>
+						<metal>
+							<albedo_map>model://rm21_armor_module/materials/textures/armor_sticker_num2.png</albedo_map>
+						</metal>
+					</pbr>
 				</material>
 			</visual>
 			<collision name="collision">

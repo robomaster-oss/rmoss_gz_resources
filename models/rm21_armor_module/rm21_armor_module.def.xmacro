@@ -22,7 +22,7 @@
         </visual>
     </xmacro_define_block>
     <!--macro defination: small armor module-->
-    <xmacro_define_block name="small_armor" params="suffix parent sticker_uri pose">
+    <xmacro_define_block name="small_armor" params="suffix parent sticker_type pose">
         <joint name="armor${suffix}_joint" type="fixed">
             <pose relative_to="${parent}">${pose}</pose>
             <parent>${parent}</parent>
@@ -48,7 +48,8 @@
                     <specular>1 1 1 1</specular>
                 </material>
             </visual>
-            <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="${sticker_uri}" condition="${sticker_uri!=''}"/>
+            <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="model://rm21_armor_module/materials/textures/armor_sticker_num1.png" condition="${sticker_type=='num1'}"/>
+            <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="model://rm21_armor_module/materials/textures/armor_sticker_num2.png" condition="${sticker_type=='num2'}"/>
             <collision name="collision">
                 <pose>0 0 0.065 0 0 0</pose>
                 <xmacro_block name="geometry_box" x="0.0127" y="0.141" z="0.13"/>
@@ -59,7 +60,7 @@
         </link>
     </xmacro_define_block>
     <!--macro defination: large armor module-->
-    <xmacro_define_block name="large_armor" params="suffix parent sticker_uri pose">
+    <xmacro_define_block name="large_armor" params="suffix parent sticker_type pose">
         <joint name="armor${suffix}_joint" type="fixed">
             <pose relative_to="${parent}">${pose}</pose>
             <parent>${parent}</parent>
@@ -85,7 +86,8 @@
                     <ambient>1.0 1.0 1.0</ambient>
                 </material>
             </visual>
-            <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="${sticker_uri}" condition="${sticker_uri!=''}"/>
+            <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="model://rm21_armor_module/materials/textures/armor_sticker_num1.png" condition="${sticker_type=='num1'}"/>
+            <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="model://rm21_armor_module/materials/textures/armor_sticker_num2.png" condition="${sticker_type=='num2'}"/>
             <collision name="collision">
                 <pose>0 0 0.065 0 0 0</pose>
                 <xmacro_block name="geometry_box" x="0.012" y="0.236" z="0.13"/>
@@ -118,13 +120,13 @@
         </link>
     </xmacro_define_block>
     <!--macro defination: small armor module with support frame-->
-    <xmacro_define_block name="small_armor_with_support" params="suffix parent sticker_uri pose">
+    <xmacro_define_block name="small_armor_with_support" params="suffix parent sticker_type pose">
         <xmacro_block name="armor_support_frame" suffix="${suffix}" parent="${parent}" pose="${pose}"/>
-        <xmacro_block name="small_armor" suffix="${suffix}" parent="armor_support_frame${suffix}" sticker_uri="${sticker_uri}" pose="0.075 0 -0.071 0 -0.262 0"/>
+        <xmacro_block name="small_armor" suffix="${suffix}" parent="armor_support_frame${suffix}" sticker_type="${sticker_type}" pose="0.075 0 -0.071 0 -0.262 0"/>
     </xmacro_define_block>
     <!--macro defination: large armor module with support frame-->
-    <xmacro_define_block name="large_armor_with_support" params="suffix parent sticker_uri pose">
+    <xmacro_define_block name="large_armor_with_support" params="suffix parent sticker_type pose">
         <xmacro_block name="armor_support_frame" suffix="${suffix}" parent="${parent}" pose="${pose}"/>
-        <xmacro_block name="large_armor" suffix="${suffix}" parent="armor_support_frame${suffix}" sticker_uri="${sticker_uri}" pose="0.075 0 -0.071 0 -0.262 0"/>
+        <xmacro_block name="large_armor" suffix="${suffix}" parent="armor_support_frame${suffix}" sticker_type="${sticker_type}" pose="0.075 0 -0.071 0 -0.262 0"/>
     </xmacro_define_block>
 </sdf>
