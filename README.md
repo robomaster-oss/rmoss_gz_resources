@@ -29,32 +29,6 @@ RoboMaster2022赛季裁判系统
 > 对于RM2022赛季，裁判系统变化不大，但由于考虑到命名一致性，应使用`rm22_*`系列模块，使用方式不发生变化，即`xmacro_block`的name保持不变。
 
 
-在xmacro文件中，可直接使用这些模块，在每一个模块下，都定义了一个使用样例`model.sdf.xmacro`可以参考。同时也可以使用多个模块，例如在`models/rmua19_standard_robot/rmua19_standard_robot.def.xmacro`中。
-
-```xml
-<!--首先需要include相应模块定义 -->
-	<xmacro_include uri="model://rm21_armor_module/rm21_armor_module.def.xmacro" />
-    <xmacro_include uri="model://rm21_light_indicator_module/rm21_light_indicator_module.def.xmacro" />
-    <xmacro_include uri="model://rm21_speed_monitor_module/rm21_speed_monitor_module.def.xmacro" />       
-<!--然后使用相应模块即可 -->
-    <!--front armors -->
-   <xmacro_block name="small_armor_with_support" suffix="_0" parent="chassis"  
-            sticker_uri="${armor_sticker_map_uri}" pose="0.197 0 0.061 0 0 0"/>
-    <!--left armors -->
-    <xmacro_block name="small_armor_with_support" suffix="_1" parent="chassis" 
-            sticker_uri="${armor_sticker_map_uri}" pose="0 0.116 0.061 0 0 1.5708"/>
-    <!--rear armors -->
-    <xmacro_block name="small_armor_with_support" suffix="_2" parent="chassis" 
-            sticker_uri="${armor_sticker_map_uri}" pose="-0.197 0 0.061 0 0 3.14"/>
-    <!--right armors -->
-    <xmacro_block name="small_armor_with_support" suffix="_3" parent="chassis" 
-            sticker_uri="${armor_sticker_map_uri}" pose="0 -0.116 0.061 0 0 -1.5708"/>
-    <!--light_indicator-->
-    <xmacro_block name="light_indicator" suffix="" parent="chassis" pose="-0.207 0 0.1 0 0 0"/>
-    <!--speed_monitor_17mm-->
-    <xmacro_block name="speed_monitor_17mm" suffix="" parent="gimbal_pitch" pose="0.07 0 0 0 0 0"/>
-```
-
 #### rmua19_standard_robot模型
 
 RoboMaster University AI Challenge 2019 标准步兵机器人
