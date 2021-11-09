@@ -51,11 +51,12 @@
             <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="model://rm21_armor_module/materials/textures/armor_sticker_num1.png" condition="${sticker_type=='num1'}"/>
             <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="model://rm21_armor_module/materials/textures/armor_sticker_num2.png" condition="${sticker_type=='num2'}"/>
             <collision name="collision">
-                <pose>0 0 0.065 0 0 0</pose>
-                <xmacro_block name="geometry_box" x="0.0127" y="0.141" z="0.13"/>
+                <pose>0 0 0.0625 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.013" y="0.135" z="0.125"/>
             </collision>
             <collision name="target_collision">
-                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/small_armor_target.dae"/>
+                <pose>0.012 0 0.0625 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.008" y="0.135" z="0.125"/>
             </collision>
         </link>
     </xmacro_define_block>
@@ -89,11 +90,12 @@
             <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="model://rm21_armor_module/materials/textures/armor_sticker_num1.png" condition="${sticker_type=='num1'}"/>
             <xmacro_block name = "armor_sticker_visual_with_albedo_map" sticker_uri="model://rm21_armor_module/materials/textures/armor_sticker_num2.png" condition="${sticker_type=='num2'}"/>
             <collision name="collision">
-                <pose>0 0 0.065 0 0 0</pose>
-                <xmacro_block name="geometry_box" x="0.012" y="0.236" z="0.13"/>
+                <pose>0 0 0.0625 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.013" y="0.236" z="0.125"/>
             </collision>
             <collision name="target_collision">
-                <xmacro_block name="geometry_mesh" uri="model://rm21_armor_module/meshes/large_armor_target.dae"/>
+                <pose>0.012 0 0.0625 0 0 0</pose>
+                <xmacro_block name="geometry_box" x="0.008" y="0.236" z="0.125"/>
             </collision>
         </link>
     </xmacro_define_block>
