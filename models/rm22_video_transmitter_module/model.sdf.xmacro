@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <sdf version="1.7">
      <!--include defination-->
-    <xmacro_include uri="model://rm22_speed_monitor_module/rm22_speed_monitor_module.def.xmacro" />
-    <!--rm22_speed_monitor_module example-->
-    <model name='rm22_speed_monitor_module'>
+    <xmacro_include uri="model://rm22_video_transmitter_module/rm22_video_transmitter_module.def.xmacro" />
+    <!--rm22_video_transmitter_module example-->
+    <model name='rm22_video_transmitter_module'>
         <pose>0 0 0.2 0 0 0</pose>
         <link name="base_link">
             <inertial>
@@ -20,7 +20,6 @@
                 <xmacro_block name="geometry_box" x="0.4" y="0.4" z="0.4" />
             </collision>
         </link>
-        <xmacro_block name="speed_monitor_17mm" suffix="_1" parent="base_link" pose="0.2 0 -0.1 0 0 0"/> 
-        <xmacro_block name="speed_monitor_42mm" suffix="_2" parent="base_link" pose="0.2 0 0.1 0 0 0"/> 
+        <xmacro_block name="video_transmitter" suffix="" parent="base_link" pose="0 0 0.2 0 0 0" fps="30"/> 
     </model>
 </sdf>

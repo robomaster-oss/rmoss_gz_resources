@@ -397,9 +397,14 @@
 			<visual name="visual">
 				<geometry>
 					<mesh>
-						<uri>model://rm21_armor_module/meshes/armor_support_frame.dae</uri>
+						<uri>model://rm21_armor_module/meshes/armor_support_frame.stl</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<collision name="collision">
 				<pose>0.015 0 0 0 0 0</pose>
@@ -418,7 +423,7 @@
 		<link name="armor_0">
 			<pose relative_to="armor_0_joint">0 0 0 0 0 0</pose>
 			<inertial>
-				<pose>0 0 0.065 0 0 0</pose>
+				<pose>0 0 0.0625 0 0 0</pose>
 				<mass>0.1</mass>
 				<inertia>
 					<ixx>0.0003065083333333333</ixx>
@@ -435,6 +440,11 @@
 						<uri>model://rm21_armor_module/meshes/small_armor.dae</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<visual name="target_visual">
 				<geometry>
@@ -442,6 +452,11 @@
 						<uri>model://rm21_armor_module/meshes/small_armor_target.dae</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<visual name="light_bar_visual">
 				<geometry>
@@ -450,26 +465,26 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 1 1 1</ambient>
-					<diffuse>1 1 1 1</diffuse>
-					<specular>1 1 1 1</specular>
+					<ambient>1.0 1.0 1.0</ambient>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>0.5 0.5 0.5</specular>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
-				<pose>0.014 0 0.065 1.5708 0 1.5708</pose>
+				<pose>0.014 0 0.0625 1.5708 0 1.5708</pose>
 				<geometry>
 					<plane>
 						<normal>0 0 1</normal>
-						<size>0.1 0.1</size>
+						<size>0.136 0.125</size>
 					</plane>
 				</geometry>
 				<material>
-					<diffuse>1.0 1.0 1.0</diffuse>
-					<specular>1.0 1.0 1.0</specular>
 					<ambient>1.0 1.0 1.0</ambient>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>0.1 0.1 0.1</specular>
 					<pbr>
 						<metal>
-							<albedo_map>model://rm21_armor_module/materials/textures/armor_sticker_num1.png</albedo_map>
+							<albedo_map>model://rm21_armor_module/materials/textures/small_num1.png</albedo_map>
 						</metal>
 					</pbr>
 				</material>
@@ -514,9 +529,14 @@
 			<visual name="visual">
 				<geometry>
 					<mesh>
-						<uri>model://rm21_armor_module/meshes/armor_support_frame.dae</uri>
+						<uri>model://rm21_armor_module/meshes/armor_support_frame.stl</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<collision name="collision">
 				<pose>0.015 0 0 0 0 0</pose>
@@ -535,7 +555,7 @@
 		<link name="armor_1">
 			<pose relative_to="armor_1_joint">0 0 0 0 0 0</pose>
 			<inertial>
-				<pose>0 0 0.065 0 0 0</pose>
+				<pose>0 0 0.0625 0 0 0</pose>
 				<mass>0.1</mass>
 				<inertia>
 					<ixx>0.0003065083333333333</ixx>
@@ -552,6 +572,11 @@
 						<uri>model://rm21_armor_module/meshes/small_armor.dae</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<visual name="target_visual">
 				<geometry>
@@ -559,6 +584,11 @@
 						<uri>model://rm21_armor_module/meshes/small_armor_target.dae</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<visual name="light_bar_visual">
 				<geometry>
@@ -567,26 +597,26 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 1 1 1</ambient>
-					<diffuse>1 1 1 1</diffuse>
-					<specular>1 1 1 1</specular>
+					<ambient>1.0 1.0 1.0</ambient>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>0.5 0.5 0.5</specular>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
-				<pose>0.014 0 0.065 1.5708 0 1.5708</pose>
+				<pose>0.014 0 0.0625 1.5708 0 1.5708</pose>
 				<geometry>
 					<plane>
 						<normal>0 0 1</normal>
-						<size>0.1 0.1</size>
+						<size>0.136 0.125</size>
 					</plane>
 				</geometry>
 				<material>
-					<diffuse>1.0 1.0 1.0</diffuse>
-					<specular>1.0 1.0 1.0</specular>
 					<ambient>1.0 1.0 1.0</ambient>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>0.1 0.1 0.1</specular>
 					<pbr>
 						<metal>
-							<albedo_map>model://rm21_armor_module/materials/textures/armor_sticker_num1.png</albedo_map>
+							<albedo_map>model://rm21_armor_module/materials/textures/small_num1.png</albedo_map>
 						</metal>
 					</pbr>
 				</material>
@@ -631,9 +661,14 @@
 			<visual name="visual">
 				<geometry>
 					<mesh>
-						<uri>model://rm21_armor_module/meshes/armor_support_frame.dae</uri>
+						<uri>model://rm21_armor_module/meshes/armor_support_frame.stl</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<collision name="collision">
 				<pose>0.015 0 0 0 0 0</pose>
@@ -652,7 +687,7 @@
 		<link name="armor_2">
 			<pose relative_to="armor_2_joint">0 0 0 0 0 0</pose>
 			<inertial>
-				<pose>0 0 0.065 0 0 0</pose>
+				<pose>0 0 0.0625 0 0 0</pose>
 				<mass>0.1</mass>
 				<inertia>
 					<ixx>0.0003065083333333333</ixx>
@@ -669,6 +704,11 @@
 						<uri>model://rm21_armor_module/meshes/small_armor.dae</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<visual name="target_visual">
 				<geometry>
@@ -676,6 +716,11 @@
 						<uri>model://rm21_armor_module/meshes/small_armor_target.dae</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<visual name="light_bar_visual">
 				<geometry>
@@ -684,26 +729,26 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 1 1 1</ambient>
-					<diffuse>1 1 1 1</diffuse>
-					<specular>1 1 1 1</specular>
+					<ambient>1.0 1.0 1.0</ambient>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>0.5 0.5 0.5</specular>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
-				<pose>0.014 0 0.065 1.5708 0 1.5708</pose>
+				<pose>0.014 0 0.0625 1.5708 0 1.5708</pose>
 				<geometry>
 					<plane>
 						<normal>0 0 1</normal>
-						<size>0.1 0.1</size>
+						<size>0.136 0.125</size>
 					</plane>
 				</geometry>
 				<material>
-					<diffuse>1.0 1.0 1.0</diffuse>
-					<specular>1.0 1.0 1.0</specular>
 					<ambient>1.0 1.0 1.0</ambient>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>0.1 0.1 0.1</specular>
 					<pbr>
 						<metal>
-							<albedo_map>model://rm21_armor_module/materials/textures/armor_sticker_num1.png</albedo_map>
+							<albedo_map>model://rm21_armor_module/materials/textures/small_num1.png</albedo_map>
 						</metal>
 					</pbr>
 				</material>
@@ -748,9 +793,14 @@
 			<visual name="visual">
 				<geometry>
 					<mesh>
-						<uri>model://rm21_armor_module/meshes/armor_support_frame.dae</uri>
+						<uri>model://rm21_armor_module/meshes/armor_support_frame.stl</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<collision name="collision">
 				<pose>0.015 0 0 0 0 0</pose>
@@ -769,7 +819,7 @@
 		<link name="armor_3">
 			<pose relative_to="armor_3_joint">0 0 0 0 0 0</pose>
 			<inertial>
-				<pose>0 0 0.065 0 0 0</pose>
+				<pose>0 0 0.0625 0 0 0</pose>
 				<mass>0.1</mass>
 				<inertia>
 					<ixx>0.0003065083333333333</ixx>
@@ -786,6 +836,11 @@
 						<uri>model://rm21_armor_module/meshes/small_armor.dae</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<visual name="target_visual">
 				<geometry>
@@ -793,6 +848,11 @@
 						<uri>model://rm21_armor_module/meshes/small_armor_target.dae</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<visual name="light_bar_visual">
 				<geometry>
@@ -801,26 +861,26 @@
 					</mesh>
 				</geometry>
 				<material>
-					<ambient>1 1 1 1</ambient>
-					<diffuse>1 1 1 1</diffuse>
-					<specular>1 1 1 1</specular>
+					<ambient>1.0 1.0 1.0</ambient>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>0.5 0.5 0.5</specular>
 				</material>
 			</visual>
 			<visual name="sticker_visual">
-				<pose>0.014 0 0.065 1.5708 0 1.5708</pose>
+				<pose>0.014 0 0.0625 1.5708 0 1.5708</pose>
 				<geometry>
 					<plane>
 						<normal>0 0 1</normal>
-						<size>0.1 0.1</size>
+						<size>0.136 0.125</size>
 					</plane>
 				</geometry>
 				<material>
-					<diffuse>1.0 1.0 1.0</diffuse>
-					<specular>1.0 1.0 1.0</specular>
 					<ambient>1.0 1.0 1.0</ambient>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>0.1 0.1 0.1</specular>
 					<pbr>
 						<metal>
-							<albedo_map>model://rm21_armor_module/materials/textures/armor_sticker_num1.png</albedo_map>
+							<albedo_map>model://rm21_armor_module/materials/textures/small_num1.png</albedo_map>
 						</metal>
 					</pbr>
 				</material>
@@ -868,6 +928,11 @@
 						<uri>model://rm21_light_indicator_module/meshes/light_indicator_holder.dae</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<visual name="light_bar_visual">
 				<geometry>
@@ -876,9 +941,9 @@
 					</mesh>
 				</geometry>
 				<material>
-					<diffuse>1.0 1.0 1.0</diffuse>
-					<specular>1.0 1.0 1.0</specular>
 					<ambient>1.0 1.0 1.0</ambient>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>0.5 0.5 0.5</specular>
 				</material>
 			</visual>
 			<collision name="light_bar_collision">
@@ -916,6 +981,11 @@
 						<uri>model://rm21_speed_monitor_module/meshes/speed_monitor_17mm.dae</uri>
 					</mesh>
 				</geometry>
+				<material>
+					<ambient>0.1 0.1 0.1</ambient>
+					<diffuse>0.05 0.05 0.05</diffuse>
+					<specular>0.6 0.6 0.6</specular>
+				</material>
 			</visual>
 			<visual name="light_bar_visual">
 				<geometry>
@@ -924,9 +994,9 @@
 					</mesh>
 				</geometry>
 				<material>
-					<diffuse>1.0 1.0 1.0</diffuse>
-					<specular>1.0 1.0 1.0</specular>
 					<ambient>1.0 1.0 1.0</ambient>
+					<diffuse>1.0 1.0 1.0</diffuse>
+					<specular>0.5 0.5 0.5</specular>
 				</material>
 			</visual>
 			<collision name="collision">

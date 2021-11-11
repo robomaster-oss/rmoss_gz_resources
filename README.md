@@ -6,30 +6,28 @@ rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)�
 * 标准射击弹丸：17mm荧光弹，42mm荧光弹
 * 标准机器人：RoboMaster University AI Challenge2019标准步兵机器人模型
 
-采用[xmacro](https://github.com/gezp/xmacro)方式定义了宏模块，可以方便的被复用。在机器人SDF模型模块化构建中，遵循`控制器分离原则`，即对于SDF模型，将3D模型部分与控制器（也就是插件）不耦合在一起，这样可以更换使用自己的控制器，使用更加灵活。
+采用[xmacro](https://github.com/gezp/xmacro)方式定义了宏模块，可以方便的被复用。在机器人SDF模型模块化构建中，遵循`插件分离原则`，即对于SDF模型，将3D模型部分与控制器（也就是插件）不耦合在一起，这样可以更换使用自己的控制器，使用更加灵活。
 
-## 模型简介
-
-#### 裁判系统组件
+## 裁判系统组件
 
 RoboMaster2021赛季裁判系统
 
 * rm21_armor_module（装甲板模块）：`small_armor`, `large_armor`, `small_armor_with_support`, `large_armor_with_support`
 * rm21_light_indicator_module（灯条指示模块）：`light_indicator` 
-* rm21_speed_monitor_module（枪口测速模块）：`speed_monitor_17mm`, `speed_monitor_42mm`(TODO)
+* rm21_speed_monitor_module（枪口测速模块）：`speed_monitor_17mm`, `speed_monitor_42mm`.
 
-* rm21_video_transmitter_module（图传模块）：`video_transmitter` (TODO)
+* rm21_video_transmitter_module（图传模块）：`video_transmitter`.
 
 * rm21_rfid_interaction_module（RFID模块）：暂不考虑，需要等待Ignition Gazebo的支持。
 
 RoboMaster2022赛季裁判系统
 
-* rm22_armor_module, rm22_light_indicator_module, rm22_speed_monitor_module
+* rm22_light_indicator_module, rm22_speed_monitor_module, rm21_video_transmitter_module 无变化。
+* rm22_armor_module新增RMUA专用贴纸。
 
 > 对于RM2022赛季，裁判系统变化不大，但由于考虑到命名一致性，应使用`rm22_*`系列模块，使用方式不发生变化，即`xmacro_block`的name保持不变。
 
-
-#### rmua19_standard_robot模型
+## rmua19_standard_robot模型
 
 RoboMaster University AI Challenge 2019 标准步兵机器人
 
@@ -38,7 +36,7 @@ RoboMaster University AI Challenge 2019 标准步兵机器人
  * 支持云台（pitch,yaw）角度控制，使用Ignition官方插件`JointPositionController`.
  * 具有装甲板灯条发光效果，需使用插件，可测试自瞄等识别算法。
 
-在标准机器人上可以加上自己的相机构建相应模块构建自己的机器人模型，例如
+在标准机器人上可以加上自己的相机等传感器构建自己的机器人模型，例如
 
 ```xml
 <sdf version="1.7">   
@@ -62,11 +60,16 @@ RoboMaster University AI Challenge 2019 标准步兵机器人
 
 * 这里只包含机器人3D模型，不包含控制插件，可自行选择合适的控制插件（如射击插件，麦轮插件，云台控制插件，灯条插件等）。
 
-## 建模Tip
+## 建模指南
 
-* 先使用SW，blender等3D建模工具进行建模，然后再把各个模块（依照可活动关节分离）导出STL或dea文件。
-* 然后编写SDF文件（采用[xmacro](https://github.com/gezp/xmacro) 宏工具进行`模块化建模`），模块之间的相对位姿可以在建模工具中直接得到。
-* 尽可能简化模型，对于碰撞形状，可采用简单元素，减小仿真计算量。
+采用[xmacro](https://github.com/gezp/xmacro) 宏工具进行SDF`模块化建模`,应该尽可能遵守以下几个原则：
+
+* `插件分离原则` : 使用xmacro进行模块化时，插件应该和模型分离，这样方便使用自定义的插件作为控制器。
+* `Collision简洁原则`：在构建机器人<collision>时，尽可能采用简单的几何（如box，cylinder, sphere）代替复杂mesh文件，必要时可以忽略部分collision，减小仿真计算量。
+
+具体建模使用可参考[RMOSS Ign建模指南](https://robomaster-oss.github.io/rmoss_tutorials/#/developer_guides/rmoss_ign_modeling)。
+
+> Tip: 使用SW，blender等3D建模工具将整个机器人分成几个模块（依照可活动关节分离），模块之间使用关节连接，然后再把各个模块导出STL或dea文件，连杆，关节的尺寸，以及之间的相对位姿可在3D建模工具测量得到。
 
 ## 版权及维护者
 

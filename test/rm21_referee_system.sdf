@@ -6,17 +6,23 @@
             <real_time_factor>1.0</real_time_factor>
         </physics>
         <plugin
-      filename="ignition-gazebo-physics-system"
-      name="ignition::gazebo::systems::Physics">
-    </plugin>
+            filename="ignition-gazebo-physics-system"
+            name="ignition::gazebo::systems::Physics"></plugin>
         <plugin
-      filename="ignition-gazebo-user-commands-system"
-      name="ignition::gazebo::systems::UserCommands">
-    </plugin>
+            filename="ignition-gazebo-user-commands-system"
+            name="ignition::gazebo::systems::UserCommands"></plugin>
         <plugin
-      filename="ignition-gazebo-scene-broadcaster-system"
-      name="ignition::gazebo::systems::SceneBroadcaster">
-    </plugin>
+            filename="ignition-gazebo-scene-broadcaster-system"
+            name="ignition::gazebo::systems::SceneBroadcaster"></plugin>
+        <!-- Generates rendering sensor data -->
+        <plugin
+            filename="libignition-gazebo-sensors-system.so"
+            name="ignition::gazebo::systems::Sensors">
+            <!-- ogre2 not working with just the MESA_GL_VERSION_OVERRIDE=3.3 trick -->
+            <render_engine>ogre2</render_engine>
+        </plugin>
+        <plugin filename="libignition-gazebo-imu-system.so"
+        		name="ignition::gazebo::systems::Imu"></plugin>
         <light type="directional" name="sun">
             <cast_shadows>true</cast_shadows>
             <pose>0 0 10 0 0 0</pose>
@@ -70,6 +76,11 @@
             <uri>model://rm21_speed_monitor_module</uri>
             <name>speed_monitor_module</name>
             <pose>2 0 0.2 0 0 0</pose>
+        </include>
+        <include>
+            <uri>model://rm21_video_transmitter_module</uri>
+            <name>video_transmitter_module</name>
+            <pose>3 0 0.2 0 0 0</pose>
         </include>
     </world>
 </sdf>

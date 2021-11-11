@@ -71,5 +71,10 @@
             <name>speed_monitor_module</name>
             <pose>2 0 0.2 0 0 0</pose>
         </include>
+        <include>
+            <uri>model://rm22_video_transmitter_module</uri>
+            <name>video_transmitter_module</name>
+            <pose>3 0 0.2 0 0 0</pose>
+        </include>
     </world>
 </sdf>

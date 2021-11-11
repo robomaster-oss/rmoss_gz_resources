@@ -21,11 +21,11 @@
             </collision>
         </link>
         <xmacro_block name="small_armor" suffix="_1" parent="base_link"
-                sticker_type="" pose="0 -0.15 0.2 0 0 0"/>
+                sticker_type="num1_0" pose="0 -0.15 0.2 0 0 0"/>
         <xmacro_block name="large_armor" suffix="_2" parent="base_link"
                 sticker_type="num1" pose="0 0.15 0.2 0 0 0"/>
         <xmacro_block name="small_armor_with_support" suffix="_3" parent="base_link"
-                sticker_type="num2" pose="0.2 0 0 0 0 0"/>
+                sticker_type="num2_1" pose="0.2 0 0 0 0 0"/>
         <xmacro_block name="large_armor_with_support" suffix="_4" parent="base_link"
                 sticker_type="num2" pose="0 0.2 0 0 0 1.57"/>
     </model>
