@@ -475,7 +475,7 @@
 				<geometry>
 					<plane>
 						<normal>0 0 1</normal>
-						<size>0.136 0.125</size>
+						<size>0.130 0.120</size>
 					</plane>
 				</geometry>
 				<material>
@@ -607,7 +607,7 @@
 				<geometry>
 					<plane>
 						<normal>0 0 1</normal>
-						<size>0.136 0.125</size>
+						<size>0.130 0.120</size>
 					</plane>
 				</geometry>
 				<material>
@@ -739,7 +739,7 @@
 				<geometry>
 					<plane>
 						<normal>0 0 1</normal>
-						<size>0.136 0.125</size>
+						<size>0.130 0.120</size>
 					</plane>
 				</geometry>
 				<material>
@@ -871,7 +871,7 @@
 				<geometry>
 					<plane>
 						<normal>0 0 1</normal>
-						<size>0.136 0.125</size>
+						<size>0.130 0.120</size>
 					</plane>
 				</geometry>
 				<material>
