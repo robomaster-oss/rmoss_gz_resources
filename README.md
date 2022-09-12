@@ -1,6 +1,6 @@
-# rmoss_ign_resources
+# rmoss_gz_resources
 
-rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)项目中的RoboMaster Ignition Simulator提供公共基本模型资源，包括以下3种类型：
+rmoss_gz_resources为[rmoss_gazebo](https://github.com/robomaster-oss/rmoss_gazebo)项目中的RoboMaster Gazebo Simulator提供公共基本模型资源，包括以下3种类型：
 
 * 裁判系统模块组件：装甲板模块，枪口测速模块，指示灯模块等
 * 标准射击弹丸：17mm荧光弹，42mm荧光弹
@@ -18,7 +18,7 @@ RoboMaster2021赛季裁判系统
 
 * rm21_video_transmitter_module（图传模块）：`video_transmitter`.
 
-* rm21_rfid_interaction_module（RFID模块）：暂不考虑，需要等待Ignition Gazebo的支持。
+* rm21_rfid_interaction_module（RFID模块）：暂不考虑，需要等待Gazebo新版本相关功能的支持。
 
 RoboMaster2022赛季裁判系统
 
