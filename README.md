@@ -1,6 +1,6 @@
-# rmoss_ign_resources
+# rmoss_gz_resources
 
-rmoss_ign_resources为[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)项目中的RoboMaster Ignition Simulator提供公共基本模型资源，包括以下3种类型：
+rmoss_gz_resources为[rmoss_gazebo](https://github.com/robomaster-oss/rmoss_gazebo)项目中的RoboMaster Gazebo Simulator提供公共基本模型资源，包括以下3种类型：
 
 * 裁判系统模块组件：装甲板模块，枪口测速模块，指示灯模块等
 * 标准射击弹丸：17mm荧光弹，42mm荧光弹
@@ -18,7 +18,7 @@ RoboMaster2021赛季裁判系统
 
 * rm21_video_transmitter_module（图传模块）：`video_transmitter`.
 
-* rm21_rfid_interaction_module（RFID模块）：暂不考虑，需要等待Ignition Gazebo的支持。
+* rm21_rfid_interaction_module（RFID模块）：暂不考虑，需要等待Gazebo新版本相关功能的支持。
 
 RoboMaster2022赛季裁判系统
 
@@ -32,7 +32,7 @@ RoboMaster2022赛季裁判系统
 RoboMaster University AI Challenge 2019 标准步兵机器人
 
  * 模型图纸来自官方[RoboMaster产品/ 机器人 / AI 机器人](https://www.robomaster.com/zh-CN/products/components/detail/1839)资料，使用[xmacro](https://github.com/gezp/xmacro) 进行SDF建模
- * 支持麦克拉姆轮地盘，使用[rmoss_ign](https://github.com/robomaster-oss/rmoss_ign)中的[麦克拉姆轮插件](https://github.com/robomaster-oss/rmoss_ign/tree/main/rmoss_ign_plugins/src/mecanum_drive2).
+ * 支持麦克拉姆轮地盘，使用[rmoss_gazebo](https://github.com/robomaster-oss/rmoss_gazebo)中的[麦克拉姆轮插件](https://github.com/robomaster-oss/rmoss_gazebo/tree/main/rmoss_gz_plugins/src/mecanum_drive2).
  * 支持云台（pitch,yaw）角度控制，使用Ignition官方插件`JointPositionController`.
  * 具有装甲板灯条发光效果，需使用插件，可测试自瞄等识别算法。
 
@@ -67,7 +67,7 @@ RoboMaster University AI Challenge 2019 标准步兵机器人
 * `插件分离原则` : 使用xmacro进行模块化时，插件应该和模型分离，这样方便使用自定义的插件作为控制器。
 * `Collision简洁原则`：在构建机器人<collision>时，尽可能采用简单的几何（如box，cylinder, sphere）代替复杂mesh文件，必要时可以忽略部分collision，减小仿真计算量。
 
-具体建模使用可参考[RMOSS Ign建模指南](https://robomaster-oss.github.io/rmoss_tutorials/#/developer_guides/rmoss_ign_modeling)。
+具体建模使用可参考[RMOSS Ign建模指南](https://robomaster-oss.github.io/rmoss_tutorials/#/developer_guides/rmoss_gazebo_modeling)。
 
 > Tip: 使用SW，blender等3D建模工具将整个机器人分成几个模块（依照可活动关节分离），模块之间使用关节连接，然后再把各个模块导出STL或dea文件，连杆，关节的尺寸，以及之间的相对位姿可在3D建模工具测量得到。
 
